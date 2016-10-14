@@ -4,4 +4,4 @@ from map import rooms
 inventory = [item_id, item_laptop, item_money]
 
 # Start game at the reception
-current_room = rooms["-enter starting room-"]
+current_room = rooms["Enterprise"]
