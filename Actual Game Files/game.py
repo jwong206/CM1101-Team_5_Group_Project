@@ -173,7 +173,6 @@ def print_room(room):
     # Display room name
     print()
     print(room["name"].upper())
-    print()
     # Display room description
     print(room["description"])
     print()

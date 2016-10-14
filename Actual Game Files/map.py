@@ -14,9 +14,7 @@ room_western = {
     "name": "Western Room",
 
     "description":
-    """The shimmering lights around you fades and you find yourself standing in the centre of an old desert town.
-    The single street is empty and there are several buildings on each side of the road. The time period here is 
-    definitely different as you notice several dated methods of transport.""",
+    """----------\n The shimmering lights around you fades and you find yourself standing in the\n centre of an old desert town.\n The single street is empty and there are several buildings on each side of\n the road.\n The time period here is definitely different as you notice several dated\n methods of transport.\n----------""",
 
     "exits":  {"north": "Sherlock", "east": "Enterprise", "south": "Jurassic Park"},
 
@@ -82,9 +80,7 @@ room_sherlock = {
     "name": "221B Baker Street",
 
     "description":
-    """You take a step forward exiting the shimmering lights that soon fade away. Taking a glance around the room you 
-    find yourself standing by a desk located in a darkened library. For what you can see in the darkness you notice 
-    multiple bookshelves located around you as well as open books and notepads on the desk by your side..""",
+    """----------\n You take a step forward exiting the shimmering lights that soon fade away.\n Taking a glance around the room you find yourself standing by a desk located\n in a darkened library.\n For what you can see in the darkness you notice multiple bookshelves located\n around you as well as open books and notepads on the desk by your side.\n----------""",
 
     "exits": {"east": "Mr Robot", "south": "Western", "north": "Shawshank", "passage": "Book of Eli", "trapdoor": "Jurassic Park"},
 
