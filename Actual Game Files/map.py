@@ -4,11 +4,7 @@ room_enterprise = {
     "name": "Enterprise",
 
     "description":
-    """You are standing in what appears to be the command deck of a ship however not a ship from your time. 
-    You are surrounded by computers that seem to be operating on their own though you have no real idea of 
-    what they are for. After a short while you hear the a humming sound as if something was turning on after 
-    which, in the four cardinal points of the room, doors open revealing  lit up circular pads.""",
-
+    """----------\n You are standing in what appears to be the command deck of a ship, but not a\n ship from your time.\n You are surrounded by computers that seem to be operating on their own,\n though you have no real idea of what they are for.\n After a short while you hear the humming sound of something turning on.\n After which, in the four cardinal points of the room, doors open revealing\n lit up circular pads.\n----------""",
     "exits": {"south": "Star Wars V Star Trek", "east": "Indiana Jones", "west": "Western", "North": "Mr Robot"},
 
     "items": [item_biscuits, item_handbook]
