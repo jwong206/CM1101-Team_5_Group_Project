@@ -77,7 +77,7 @@ room_jurassic = {
 in their eyes. If you go west you can return to the
 Queen's Buildings.""",
 
-    "exits": {"north": "Western", "east": "Star Wars V Star Trek", "south": "Inception", "secret passage": "Sherlock", "trapdoor": "Portal Room"},
+    "exits": {"north": "Western", "east": "Star Wars V Star Trek", "south": "Inception", "passage": "Sherlock", "trapdoor": "Portal Room"},
 
     "items": [item_pen]
 }
@@ -90,7 +90,7 @@ room_sherlock = {
     find yourself standing by a desk located in a darkened library. For what you can see in the darkness you notice 
     multiple bookshelves located around you as well as open books and notepads on the desk by your side..""",
 
-    "exits": {"east": "Mr Robot", "south": "Western", "north": "Shawshank", "secret passage": "Book of Eli", "trapdoor": "Jurassic Park"},
+    "exits": {"east": "Mr Robot", "south": "Western", "north": "Shawshank", "passage": "Book of Eli", "trapdoor": "Jurassic Park"},
 
     "items": [item_pen]
 }
@@ -104,7 +104,7 @@ room_Eli = {
 in their eyes. If you go west you can return to the
 Queen's Buildings.""",
 
-    "exits": {"north": "Fight Club", "south": "Indiana Jones", "west": "Mr Robot", "secret passage": "Portal Room", "trapdoor": "Sherlock"},
+    "exits": {"north": "Fight Club", "south": "Indiana Jones", "west": "Mr Robot", "passage": "Portal Room", "trapdoor": "Sherlock"},
 
     "items": [item_pen]
 }
@@ -118,7 +118,7 @@ room_portal = {
 in their eyes. If you go west you can return to the
 Queen's Buildings.""",
 
-    "exits": {"north": "Indiana Jones", "south": "Matrix", "west": "Star Wars V Star Trek", "secret passage": "Jurassic Park", "trapdoor": "Book of Eli"},
+    "exits": {"north": "Indiana Jones", "south": "Matrix", "west": "Star Wars V Star Trek", "passage": "Jurassic Park", "trapdoor": "Book of Eli"},
 
     "items": [item_pen]
 }

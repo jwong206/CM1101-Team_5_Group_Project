@@ -4,8 +4,60 @@ from map import rooms
 from player import *
 from items import *
 from gameparser import *
+import time
+global introcount
+inv = []
+introcount = 10
+print("Initialising....")
+time.sleep(1)
+print("Loading....")
+time.sleep(2)
+def introanimation(x):
+    global introcount
+    intro = "abcdefghabcdefghabcdefghabcdefghabcdefghabcdefghabcdefghx"
+    for char in intro:
+        introcount=introcount-1
+        time.sleep(0.01)
+        if introcount == 0:
+            print("Loading complete. Welcome.")
+            time.sleep(2)
+            title(x)
+            break
+        time.sleep(0.01)
+        if char is "a":
+            print("\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\")
+        time.sleep(0.01)
+        if char is "b":
+            print(" \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\")
+        time.sleep(0.01)
+        if char is "c":
+            print("  \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\")
+        time.sleep(0.01)
+        if char is "d":
+            print("   \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\")
+        time.sleep(0.01)
+        if char is "e":
+            print("   ////////////////////////////////////////")
+        time.sleep(0.01)
+        if char is "f":
+            print("  ////////////////////////////////////////")
+        time.sleep(0.01)
+        if char is "g":
+            print(" ////////////////////////////////////////")
+        time.sleep(0.01)
+        if char is "h":
+            print("////////////////////////////////////////")
+        time.sleep(0.01)
+        if char is "x":
+            print("Loading...")
+            time.sleep(0.01)
+            introanimation(x)
 
-
+def title(x):
+    print("\n\n\n\n\n---------------------------------------------------------------------------------------------------------------------------------\n")
+    print("-INSERT TITLE HERE I GUESS LOL-\n")
+    print("---------------------------------------------------------------------------------------------------------------------------------\n\n\n")
+    main()
 
 def list_of_items(items):
     """This function takes a list of items (see items.py for the definition) and
@@ -366,5 +418,4 @@ def main():
 # '__main__' is the name of the scope in which top-level code executes.
 # See https://docs.python.org/3.4/library/__main__.html for explanation
 if __name__ == "__main__":
-    main()
-
+    introanimation("")
