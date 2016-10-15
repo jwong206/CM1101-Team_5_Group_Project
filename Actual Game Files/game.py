@@ -5,14 +5,13 @@ from player import *
 from items import *
 from gameparser import *
 import time
+import sys
+import datetime
+from datetime import datetime
 global introcount
 inv = []
-introcount = 20
-print("Initialising....")
-time.sleep(1)
-print("Loading....")
-time.sleep(2)
-def introanimation(x):
+
+def introanimation():
     global introcount
     intro = "abcdefghabcdefghabcdefghabcdefghabcdefghabcdefghabcdefghx"
     for char in intro:
@@ -21,7 +20,7 @@ def introanimation(x):
         if introcount == 0:
             print("Loading complete. Welcome.")
             time.sleep(2)
-            title(x)
+            title()
             break
         time.sleep(0.01)
         if char is "a":
@@ -51,13 +50,37 @@ def introanimation(x):
         if char is "x":
             print("Loading...")
             time.sleep(0.01)
-            introanimation(x)
+            introanimation()
 
-def title(x):
-    print("\n\n---------------------------------------------------------------------------------------------------------------------------------\n")
+def title():
+    print("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n---------------------------------------------------------------------------------------------------------------------------------\n")
     print("-INSERT TITLE HERE I GUESS LOL-\n")
-    print("---------------------------------------------------------------------------------------------------------------------------------\n\n")
-    main()
+    print("---------------------------------------------------------------------------------------------------------------------------------")
+    main_menu()
+
+def main_menu():
+	print("\n  Welcome to -name of game-. Please select an option by typing it below.\n\n     -NEW GAME- || -LOAD GAME- || -CREDITS- || -QUIT- \n\n\n\n")
+	selection = input()
+	if selection == "new" or selection == "new game":
+		print("Starting new game....")
+		time.sleep(2)
+		print("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n")
+		main()
+	elif selection == "credits":
+		print("A game by Team 5.\n")
+		time.sleep(1)
+		main_menu()
+	elif selection == "load game" or selection == "load":
+		print("Save game system yet to be implemented.\n")
+		time.sleep(1)
+		main_menu()
+	elif selection == "quit":
+		quit()
+		main_menu()
+	else:
+		print("Please cooperate.\n")
+		time.sleep(1)
+		main_menu()
 
 def list_of_items(items):
     """This function takes a list of items (see items.py for the definition) and
@@ -107,7 +130,7 @@ def print_room_items(room):
     """
     itemlist ="There is " + list_of_items(room["items"]) + " here.\n"
     if itemlist != "There is "+" here.\n":
-        print(itemlist)
+        print_by_char(itemlist)
 
 
 def print_inventory_items(items):
@@ -120,7 +143,7 @@ def print_inventory_items(items):
     <BLANKLINE>
 
     """
-    print("You have " + list_of_items(items) +".\n")
+    print_by_char("You have " + list_of_items(items) +".\n")
 
 
 
@@ -171,13 +194,19 @@ def print_room(room):
     Note: <BLANKLINE> here means that doctest should expect a blank line.
     """
     # Display room name
-    print()
-    print(room["name"].upper())
+    print("\n\n")
+    print_by_char("TIME: "+ str(datetime.now().time())[:8])
+    time.sleep(1)
+    print_by_char("DATE: "+room["date"])
+    time.sleep(1)
+    print_by_char("LOCATION: "+room["name"].upper())
+    time.sleep(1)
     # Display room description
-    print(room["description"])
+    print_by_char(room["description"])
+    time.sleep(1)
     print()
     if print_room_items(room) != None:
-        print(print_room_items(room))
+        print_by_char(print_room_items(room))
         print()
 
     #
@@ -212,7 +241,7 @@ def print_exit(direction, leads_to):
     >>> print_exit("south", "MJ and Simon's room")
     GO SOUTH to MJ and Simon's room.
     """
-    print("GO " + direction.upper() + " to " + leads_to + ".")
+    print_by_char("GO " + direction.upper() + " to " + leads_to + ".")
 
 
 def print_menu(exits, room_items, inv_items):
@@ -245,15 +274,15 @@ def print_menu(exits, room_items, inv_items):
     What do you want to do?
 
     """
-    print("You can:")
+    print_by_char("You can:")
     # Iterate over available exits
     for direction in exits:
         # Print the exit name and where it leads to
         print_exit(direction, exit_leads_to(exits, direction))
     for i in room_items:
-        print("TAKE " + i["id"].upper() + " to take " + i["name"] + ".")
+        print_by_char("TAKE " + i["id"].upper() + " to take " + i["name"] + ".")
     for i in inv_items:
-        print("DROP " + i["id"].upper() + " to drop your " + i["name"] + ".")
+        print_by_char("DROP " + i["id"].upper() + " to drop your " + i["name"] + ".")
 
     #
     # COMPLETE ME!
@@ -411,10 +440,20 @@ def main():
         # Execute the player's command
         execute_command(command)
 
+def print_by_char(string):
+	for char in string:
+		sys.stdout.write( '%s' % char )
+		sys.stdout.flush()
+		time.sleep(0.02)
+	print()
 
-
+introcount = 20
+print_by_char("Initialising....")
+time.sleep(1)
+print_by_char("Loading....")
+time.sleep(2)
 # Are we being run as a script? If so, run main().
 # '__main__' is the name of the scope in which top-level code executes.
 # See https://docs.python.org/3.4/library/__main__.html for explanation
 if __name__ == "__main__":
-    introanimation("")
+    introanimation()

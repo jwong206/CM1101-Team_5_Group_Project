@@ -7,7 +7,8 @@ room_enterprise = {
     """----------\n You are standing in what appears to be the command deck of a ship, but not a\n ship from your time.\n You are surrounded by computers that seem to be operating on their own,\n though you have no real idea of what they are for.\n After a short while you hear the humming sound of something turning on.\n After which, in the four cardinal points of the room, doors open revealing\n lit up circular pads.\n----------""",
     "exits": {"south": "Star Wars V Star Trek", "east": "Indiana Jones", "west": "Western", "north": "Mr Robot"},
 
-    "items": [item_biscuits, item_handbook]
+    "items": [item_biscuits, item_handbook],
+    "date": "Stardate 41254.7"
 }
 
 room_western = {
@@ -18,7 +19,8 @@ room_western = {
 
     "exits":  {"north": "Sherlock", "east": "Enterprise", "south": "Jurassic Park"},
 
-    "items": []
+    "items": [],
+    "date": "March 12th, 1970"
 }
 
 room_robot = {
@@ -32,7 +34,8 @@ pack of biscuits. The reception is to the west.""",
 
     "exits": {"east": "Book of Eli", "south": "Enterprise", "west": "Sherlock"},
 
-    "items": []
+    "items": [],
+    "date": "2016"
 }
 
 room_indiana = {
@@ -45,7 +48,8 @@ general office.""",
 
     "exits": {"north": "Book of Eli", "south": "Portal Room", "west": "Enterprise"},
 
-    "items": []
+    "items": [],
+    "date": "1935"
 }
 
 room_SWVST = {
@@ -59,7 +63,8 @@ Queen's Buildings.""",
 
     "exits": {"north": "Enterprise", "east": "Portal Room", "west": "Jurassic Park"},
 
-    "items": [item_pen]
+    "items": [item_pen],
+    "date": "A long time ago"
 }
 
 room_jurassic = {
@@ -73,7 +78,8 @@ Queen's Buildings.""",
 
     "exits": {"north": "Western", "east": "Star Wars V Star Trek", "south": "Inception", "passage": "Sherlock", "trapdoor": "Portal Room"},
 
-    "items": [item_pen]
+    "items": [item_pen],
+    "date": "2015"
 }
 
 room_sherlock = {
@@ -84,7 +90,8 @@ room_sherlock = {
 
     "exits": {"east": "Mr Robot", "south": "Western", "north": "Shawshank", "passage": "Book of Eli", "trapdoor": "Jurassic Park"},
 
-    "items": [item_pen]
+    "items": [item_pen],
+    "date": "2015"
 }
 
 room_Eli = {
@@ -98,11 +105,12 @@ Queen's Buildings.""",
 
     "exits": {"north": "Fight Club", "south": "Indiana Jones", "west": "Mr Robot", "passage": "Portal Room", "trapdoor": "Sherlock"},
 
-    "items": [item_pen]
+    "items": [item_pen],
+    "date": "30 years after a nuclear apocalypse"
 }
 
 room_portal = {
-    "name": "The Planes",
+    "name": "The Plains",
 
     "description":
     """You are standing next to the cashier's till at
@@ -112,7 +120,8 @@ Queen's Buildings.""",
 
     "exits": {"north": "Indiana Jones", "south": "Matrix", "west": "Star Wars V Star Trek", "passage": "Jurassic Park", "trapdoor": "Book of Eli"},
 
-    "items": [item_pen]
+    "items": [item_pen],
+    "date": ""
 }
 
 room_matrix = {
@@ -126,7 +135,8 @@ Queen's Buildings.""",
 
     "exits": {"south": "Portal Room"},
 
-    "items": [item_pen]
+    "items": [item_pen],
+    "date": "1999... or is it?"
 }
 
 room_inception = {
@@ -140,7 +150,8 @@ Queen's Buildings.""",
 
     "exits": {"south": "Jurassic Park"},
 
-    "items": [item_pen]
+    "items": [item_pen],
+    "date": "Who knows."
 }
 
 room_shawshank = {
@@ -154,7 +165,8 @@ Queen's Buildings.""",
 
     "exits": {"north": "Sherlock"},
 
-    "items": [item_pen]
+    "items": [item_pen],
+    "date": "1965"
 }
 room_fight = {
     "name": "An underground club",
@@ -167,7 +179,8 @@ Queen's Buildings.""",
 
     "exits": {"north": "Book of Eli"},
 
-    "items": [item_pen]
+    "items": [item_pen],
+    "date": "1999"
 }
 
 rooms = {
