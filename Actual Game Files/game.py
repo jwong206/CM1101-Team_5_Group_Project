@@ -397,7 +397,13 @@ def print_menu(exits, room_items, inv_items):
     for i in room_items:
         print_by_char("TAKE " + i["id"].upper() + " to take " + i["name"] + ".",0.01)
     for i in inv_items:
+<<<<<<< HEAD
         print_by_char("DROP " + i["id"].upper() + " to drop your " + i["name"] + ".",0.01)
+=======
+        print_by_char("DROP " + i["id"].upper() + " to drop your " + i["name"] + ".")
+    for i in inv_items:
+    	print_by_char("EXAMINE " + i["id"].upper() + " to examine " + i["name"] + ".")
+>>>>>>> 3d226900361384be9767d757d733f317c3d95fcf
 
     #
     # COMPLETE ME!
@@ -467,6 +473,16 @@ def execute_drop(item_id):
             current_room["items"].append(i)
     if droppable == False:
         print("You cannot drop that.")
+
+def execute_examine(item_id):
+	examinable = False
+	for i in inventory:
+		if i['id'] == item_id:
+			examinable = True
+			print(i['description'])
+	if examinable == False:
+		print('You cannot examine that.')
+
     
 
 def execute_command(command):
@@ -497,6 +513,12 @@ def execute_command(command):
             execute_drop(command[1])
         else:
             print("Drop what?")
+
+    elif command[0] == 'examine':
+    	if len(command) > 1:
+    		execute_examine(command[1])
+    	else:
+    		print('Examine what?')
 
     else:
         print("This makes no sense.")
