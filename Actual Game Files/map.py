@@ -20,7 +20,7 @@ room_western = {
     "exits":  {"north": "Sherlock", "east": "Enterprise", "south": "Jurassic Park"},
 
     "items": [],
-    "date": "March 12th, 1970"
+    "date": "March 12th, 1870"
 }
 
 room_robot = {
@@ -42,9 +42,7 @@ room_indiana = {
     "name": "The Temple of Doom",
 
     "description":
-    """You are standing in the Queen's Buildings parking lot.
-You can go south to the COMSC reception, or east to the
-general office.""",
+    """----------\n You find yourself standing at the base of a large set of stairs.\n The room around you seems ancient and the walls are covered in carvings which are completely unintelligible to you.\n Atop the stairs you can see a sort of shrine with <key item here> centered on it.\n----------""",
 
     "exits": {"north": "Book of Eli", "south": "Portal Room", "west": "Enterprise"},
 
@@ -56,10 +54,7 @@ room_SWVST = {
     "name": "Millennium Falcon",
 
     "description":
-    """You are standing next to the cashier's till at
-30-36 Newport Road. The cashier looks at you with hope
-in their eyes. If you go west you can return to the
-Queen's Buildings.""",
+    """----------\n Once the light fades you find yourself standing in what appears to be the cockpit of yet another ship.\n Everything appears to be powered down however you hear noises coming from somewhere not far from you, objects seem to being moved and voices raised.\n You cautiously take a quick look around only to be discovered by a being you are unfamiliar with and it appears to be hostile!\n----------""",
 
     "exits": {"north": "Enterprise", "east": "Portal Room", "west": "Jurassic Park"},
 
@@ -71,10 +66,7 @@ room_jurassic = {
     "name": "Jurassic World",
 
     "description":
-    """You are standing next to the cashier's till at
-30-36 Newport Road. The cashier looks at you with hope
-in their eyes. If you go west you can return to the
-Queen's Buildings.""",
+    """----------\n Once you took a step through the exit you have now found yourself standing in a forest.\n You're surrounded by trees and thick bushes and the only sounds you can initially hear are of birds high up in the trees.\n After a short period of brief inspection you begin to get the feeling that you are being watched.\n----------""",
 
     "exits": {"north": "Western", "east": "Star Wars V Star Trek", "south": "Inception", "passage": "Sherlock", "trapdoor": "Portal Room"},
 
@@ -172,10 +164,7 @@ room_fight = {
     "name": "An underground club",
 
     "description":
-    """You are standing next to the cashier's till at
-30-36 Newport Road. The cashier looks at you with hope
-in their eyes. If you go west you can return to the
-Queen's Buildings.""",
+    """----------\n After taking the exit you come to find yourself laying face first on the floor with a loud ringing sound in your ears which is followed by a wave of pain.\n It takes a few moments but you finally begin to hear again however it is faded yelling at first which gradually becomes more clear.\n Pulling yourself to your feet you find yourself standing in a darkened room surrounded by yelling spectators as you come face to face with a man who shoves you back somewhat and looks as if he is ready to fight!\n----------""",
 
     "exits": {"north": "Book of Eli"},
 

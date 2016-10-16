@@ -53,13 +53,128 @@ def introanimation():
             introanimation()
 
 def title():
-    print("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n---------------------------------------------------------------------------------------------------------------------------------\n")
-    print("-INSERT TITLE HERE I GUESS LOL-\n")
-    print("---------------------------------------------------------------------------------------------------------------------------------")
+    print("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n")
+    print("---------------------------------------------------------------------------------------------------------")
+    time.sleep(0.02)
+    print("   |             /                                  |                                  \             |   ")
+    time.sleep(0.02)
+    print("   |            /                                   |                                   \            |   ")
+    time.sleep(0.02)
+    print("   |           /                                    |                                    \           |   ")
+    time.sleep(0.02)
+    print("   |          /                                    /|\                                    \          |   ")
+    time.sleep(0.02)
+    print("   |         /                                     |||                                     \         |   ")
+    time.sleep(0.02)
+    print("   |        /                                     / | \                                     \        |   ")
+    time.sleep(0.02)
+    print("   |       /                                     /  |  \                                     \       |   ")
+    time.sleep(0.02)
+    print("   |      /                                      |  |  |                                      \      |   ")
+    time.sleep(0.02)
+    print("   |     /                                       |  |  |                                       \     |   ")
+    time.sleep(0.02)
+    print("   |    /                                        |  |  |                                        \    |   ")
+    time.sleep(0.02)
+    print("   |   /                                        /   |   \                                        \   |   ")
+    time.sleep(0.02)
+    print("   |  /                                         |   |   |                                         \  |   ")
+    time.sleep(0.02)
+    print("   | /                                         /    |    \                                         \ |   ")
+    time.sleep(0.02)
+    print("   |/                     ▄████████            |    |    |            ▄███████▄                     \|   ")
+    time.sleep(0.02)
+    print("   |                     ███    ███            |    |    |            ███    ███                     |   ")
+    time.sleep(0.02)
+    print("   |                     ███    █▀             |    |    |            ███    ███                     |   ")
+    time.sleep(0.02)
+    print("   |                     ███                  /     |     \           ███    ███                     |   ")
+    time.sleep(0.02)
+    print("   |                    ▀███████████          |     |     |          ▀█████████▀                     |   ")
+    time.sleep(0.02)
+    print("   |                             ███         /      |      \          ███                            |   ")
+    time.sleep(0.02)
+    print("   |                       ▄█    ███        /       |       \         ███                            |   ")
+    time.sleep(0.02)
+    print("   |                      ▄████████▀        █████████████████        ▄████▀                          |   ")
+    time.sleep(0.02)
+    print("   |                                        ▀███████████████▀                                        |   ")
+    time.sleep(0.02)
+    print("   |                                         ▀█████████████▀                                         |   ")
+    time.sleep(0.02)
+    print("   |                                 ___▄▄    \     |     /    ▄▄___                                 |   ")
+    time.sleep(0.02)
+    print("   |                         ______%@   ███▄   \----|----/   ▄███   @%______                         |   ")
+    time.sleep(0.02)
+    print("   |                 ______.@#          █████\   \  |  /   /█████          #@.______                 |   ")
+    time.sleep(0.02)
+    print("   |           _____%@                  █████ \__ \ | / __/ █████                  @%______          |   ")
+    time.sleep(0.02)
+    print("   |    ____.@(                         █████    \  |  /    █████                         (@.____    |   ")
+    time.sleep(0.02)
+    print("   |---%@-------------------------------█████------#|#------█████-------------------------------@%---|   ")
+    time.sleep(0.02)
+    print("   |    ¯¯¯¯¯¯\@,______                 █████  __// | \\\__  █████                 ______,@/¯¯¯¯¯¯    |   ")
+    time.sleep(0.02)
+    print("   |                  %&______          █████ /  /  |  \  \ █████          ______&%                  |   ")
+    time.sleep(0.02)
+    print("   |                         *@,______  ████▀  /    |    \  ▀████   _____,@*                         |   ")
+    time.sleep(0.02)
+    print("   |                                 #@_██▀   /     |     \   ▀██__@#                                |   ")
+    time.sleep(0.02)
+    print("   |                                         ▄█████████████▄                                         |   ")
+    time.sleep(0.02)
+    print("   |                                        ▄███████████████▄                                        |   ")
+    time.sleep(0.02)
+    print("   |                                        █████████████████                                        |   ")
+    time.sleep(0.02)
+    print("   |                      ▄██████▄          \       |       /         ▄█   ▄█▄                       |   ")
+    time.sleep(0.02)
+    print("   |                     ███    ███          \      |      /         ███ ▄███▀                       |   ")
+    time.sleep(0.02)
+    print("   |                     ███    ███           |     |     |          ███ ██▀                         |   ")
+    time.sleep(0.02)
+    print("   |                     ███    ███           \     |     /         ▄█████▀                          |   ")
+    time.sleep(0.02)
+    print("   |                     ███    ███           |     |     |        ▀▀█████▄                          |   ")
+    time.sleep(0.02)
+    print("   |                     ███    ███            \    |    /            ███ ██▄                        |   ")
+    time.sleep(0.02)
+    print("   |                     ███    ███            |    |    |            ███ ▀███                       |   ")
+    time.sleep(0.02)
+    print("   |\                     ▀██████▀             |    |    |            ███   ▀█▀                     /|   ")
+    time.sleep(0.02)
+    print("   | \                                         |    |    |            ▀                            / |   ")
+    time.sleep(0.02)
+    print("   |  \                                        \    |    /                                        /  |   ")
+    time.sleep(0.02)
+    print("   |   \                                        |   |   |                                        /   |   ")    
+    time.sleep(0.02)
+    print("   |    \                                       |   |   |                                       /    |   ")
+    time.sleep(0.02)
+    print("   |     \                                      |   |   |                                      /     |   ")
+    time.sleep(0.02)
+    print("   |      \                                     \   |   /                                     /      |   ")
+    time.sleep(0.02)
+    print("   |       \                                     |  |  |                                     /       |   ")
+    time.sleep(0.02)
+    print("   |        \                                    \  |  /                                    /        |   ")
+    time.sleep(0.02)
+    print("   |         \                                    | | |                                    /         |   ")
+    time.sleep(0.02)
+    print("   |          \                                   \ | /                                   /          |   ")
+    time.sleep(0.02)
+    print("   |           \                                   |||                                   /           |   ")
+    time.sleep(0.02)
+    print("   |            \                                   |                                   /            |   ")
+    time.sleep(0.02)
+    print("   |             \                                  |                                  /             |   ")
+    time.sleep(0.02)
+    print("---|-------------------------------------------------------------------------------------------------|---")
     main_menu()
 
 def main_menu():
-	print("\n  Welcome to -name of game-. Please select an option by typing it below.\n\n     -NEW GAME- || -LOAD GAME- || -CREDITS- || -QUIT- \n\n\n\n")
+	print("\n               Welcome to -name of game-. Please select an option by typing it below.\n\n                   -NEW GAME- || -LOAD GAME- || -CREDITS- || -QUIT- \n")
 	selection = input()
 	if selection == "new" or selection == "new game":
 		print("Starting new game....")
@@ -130,7 +245,7 @@ def print_room_items(room):
     """
     itemlist ="There is " + list_of_items(room["items"]) + " here.\n"
     if itemlist != "There is "+" here.\n":
-        print_by_char(itemlist)
+        print_by_char(itemlist,0.01)
 
 
 def print_inventory_items(items):
@@ -143,7 +258,7 @@ def print_inventory_items(items):
     <BLANKLINE>
 
     """
-    print_by_char("You have " + list_of_items(items) +".\n")
+    print_by_char("You have " + list_of_items(items) +".\n",0.01)
 
 
 
@@ -195,18 +310,18 @@ def print_room(room):
     """
     # Display room name
     print("\n\n")
-    print_by_char("TIME: "+ str(datetime.now().time())[:8])
+    print_by_char("TIME: "+ str(datetime.now().time())[:8],0.02)
     time.sleep(1)
-    print_by_char("DATE: "+room["date"])
+    print_by_char("DATE: "+room["date"],0.02)
     time.sleep(1)
-    print_by_char("LOCATION: "+room["name"].upper())
+    print_by_char("LOCATION: "+room["name"].upper(),0.02)
     time.sleep(1)
     # Display room description
-    print_by_char(room["description"])
-    time.sleep(1)
+    print(room["description"])
+    time.sleep(3)
     print()
     if print_room_items(room) != None:
-        print_by_char(print_room_items(room))
+        print_by_char(print_room_items(room),0.01)
         print()
 
     #
@@ -241,7 +356,7 @@ def print_exit(direction, leads_to):
     >>> print_exit("south", "MJ and Simon's room")
     GO SOUTH to MJ and Simon's room.
     """
-    print_by_char("GO " + direction.upper() + " to " + leads_to + ".")
+    print_by_char("GO " + direction.upper() + " to " + leads_to + ".",0.01)
 
 
 def print_menu(exits, room_items, inv_items):
@@ -274,15 +389,15 @@ def print_menu(exits, room_items, inv_items):
     What do you want to do?
 
     """
-    print_by_char("You can:")
+    print_by_char("You can:",0.01)
     # Iterate over available exits
     for direction in exits:
         # Print the exit name and where it leads to
         print_exit(direction, exit_leads_to(exits, direction))
     for i in room_items:
-        print_by_char("TAKE " + i["id"].upper() + " to take " + i["name"] + ".")
+        print_by_char("TAKE " + i["id"].upper() + " to take " + i["name"] + ".",0.01)
     for i in inv_items:
-        print_by_char("DROP " + i["id"].upper() + " to drop your " + i["name"] + ".")
+        print_by_char("DROP " + i["id"].upper() + " to drop your " + i["name"] + ".",0.01)
 
     #
     # COMPLETE ME!
@@ -440,17 +555,17 @@ def main():
         # Execute the player's command
         execute_command(command)
 
-def print_by_char(string):
+def print_by_char(string,wait):
 	for char in string:
 		sys.stdout.write( '%s' % char )
 		sys.stdout.flush()
-		time.sleep(0.02)
+		time.sleep(wait)
 	print()
 
 introcount = 20
-print_by_char("Initialising....")
+print_by_char("Initialising....",0.02)
 time.sleep(1)
-print_by_char("Loading....")
+print_by_char("Loading....",0.02)
 time.sleep(2)
 # Are we being run as a script? If so, run main().
 # '__main__' is the name of the scope in which top-level code executes.
