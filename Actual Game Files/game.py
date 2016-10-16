@@ -403,6 +403,9 @@ def print_menu(exits, room_items, inv_items):
         print_by_char("DROP " + i["id"].upper() + " to drop your " + i["name"] + ".")
     for i in inv_items:
     	print_by_char("EXAMINE " + i["id"].upper() + " to examine " + i["name"] + ".")
+<<<<<<< HEAD
+>>>>>>> 3d226900361384be9767d757d733f317c3d95fcf
+=======
 >>>>>>> 3d226900361384be9767d757d733f317c3d95fcf
 
     #
