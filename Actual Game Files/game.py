@@ -485,8 +485,7 @@ def execute_examine(item_id):
 			print(i['description'])
 	if examinable == False:
 		print('You cannot examine that.')
-
-    
+   
 
 def execute_command(command):
     """This function takes a command (a list of words as returned by
