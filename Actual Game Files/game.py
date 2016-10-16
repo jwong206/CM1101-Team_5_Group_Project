@@ -397,16 +397,9 @@ def print_menu(exits, room_items, inv_items):
     for i in room_items:
         print_by_char("TAKE " + i["id"].upper() + " to take " + i["name"] + ".",0.01)
     for i in inv_items:
-<<<<<<< HEAD
         print_by_char("DROP " + i["id"].upper() + " to drop your " + i["name"] + ".",0.01)
-=======
-        print_by_char("DROP " + i["id"].upper() + " to drop your " + i["name"] + ".")
     for i in inv_items:
-    	print_by_char("EXAMINE " + i["id"].upper() + " to examine " + i["name"] + ".")
-<<<<<<< HEAD
->>>>>>> 3d226900361384be9767d757d733f317c3d95fcf
-=======
->>>>>>> 3d226900361384be9767d757d733f317c3d95fcf
+    	print_by_char("EXAMINE " + i["id"].upper() + " to examine " + i["name"] + ".",0.01)
 
     #
     # COMPLETE ME!
@@ -485,7 +478,6 @@ def execute_examine(item_id):
 			print(i['description'])
 	if examinable == False:
 		print('You cannot examine that.')
-   
 
 def execute_command(command):
     """This function takes a command (a list of words as returned by
