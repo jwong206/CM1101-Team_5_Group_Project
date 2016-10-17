@@ -5,7 +5,7 @@ item_fragment1 = {
 
 item_vicbook = {
     "id": "book",
-    "name": """an old, thick book titled "The Life of Queen Victoria""",
+    "name": """an old, thick book titled 'The Life of Queen Victoria'""",
     "description":"""You flip open the first page: "Queen Victoria, born 24/05/1819...."""}
 
 item_leaflet = {

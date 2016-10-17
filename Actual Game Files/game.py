@@ -244,7 +244,7 @@ def print_room_items(room):
     """
     itemlist ="There is " + list_of_items(room["items"]) + " here.\n"
     if itemlist != "There is "+" here.\n":
-        print_by_char(itemlist,0.01)
+        print(itemlist)
 
 
 def print_inventory_items(items):
@@ -257,8 +257,7 @@ def print_inventory_items(items):
     <BLANKLINE>
 
     """
-    print_by_char("You have " + list_of_items(items) +".\n",0.01)
-    time.sleep(1)
+    print("You have " + list_of_items(items) +".\n")
 
 
 
@@ -318,12 +317,10 @@ def print_room(room):
     time.sleep(1)
     # Display room description
     print(room["description"])
-    time.sleep(2)
     print()
     if print_room_items(room) != None:
-        print_by_char(print_room_items(room),0.01)
+        print(print_room_items(room),0.01)
         print()
-    time.sleep(1)
 
     #
     # COMPLETE ME!
