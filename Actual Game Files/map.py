@@ -127,7 +127,7 @@ rooms = {
     "Mr Robot": room_robot,
     "Indiana Jones": room_indiana,
     "Star Wars": room_SW,
-    "Jurassic Park": room_jurassic,
+    "Jurassic World": room_jurassic,
     "Sherlock": room_sherlock,
     "Book of Eli": room_Eli,
     "Shawshank": room_shawshank,
