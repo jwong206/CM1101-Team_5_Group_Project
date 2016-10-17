@@ -1,14 +1,16 @@
 from items import *
+from interactions import *
 
-room_enterprise = {
-    "name": "Enterprise",
+room_Hub = {
+    "name": "Hub",
 
     "description":
-    """----------\n You are standing in what appears to be the command deck of a ship, but not a\n ship from your time.\n You are surrounded by computers that seem to be operating on their own,\n though you have no real idea of what they are for.\n After a short while you hear the humming sound of something turning on.\n After which, in the four cardinal points of the room, doors open revealing\n lit up circular pads.\n----------""",
+    """----------\n You are standing in the hub; the central room in the complex.\n A console stands in the middle of the room.\n Each wall has an electrical doorway leading to other rooms.\n----------""",
     "exits": {"south": "Star Wars V Star Trek", "east": "Indiana Jones", "west": "Western", "north": "Mr Robot"},
 
-    "items": [item_biscuits, item_handbook],
-    "date": "Stardate 41254.7"
+    "items": [item_fragment1],
+    "interacts": [interact_console],
+    "date": "Unknown"
 }
 
 room_western = {
@@ -17,7 +19,7 @@ room_western = {
     "description":
     """----------\n The shimmering lights around you fades and you find yourself standing in the\n centre of an old desert town.\n The single street is empty and there are several buildings on each side of\n the road.\n The time period here is definitely different as you notice several dated\n methods of transport.\n----------""",
 
-    "exits":  {"north": "Sherlock", "east": "Enterprise", "south": "Jurassic Park"},
+    "exits":  {"north": "Sherlock", "east": "Hub", "south": "Jurassic Park"},
 
     "items": [],
     "date": "March 12th, 1870"
@@ -27,14 +29,12 @@ room_robot = {
     "name": "Mr Robot's Room",
 
     "description":
-    """You are in your personal tutor's office. He intently
-stares at his huge monitor, ignoring you completely.
-On the desk you notice a cup of coffee and an empty
-pack of biscuits. The reception is to the west.""",
+    """----------\n You enter an ancient relic of the past: A video game arcade.\n As you look around, you see computer components spread across most surfaces.\n You also spot a single functioning arcade machine.\n----------""",
 
-    "exits": {"east": "Book of Eli", "south": "Enterprise", "west": "Sherlock"},
+    "exits": {"east": "Book of Eli", "south": "Hub", "west": "Sherlock"},
 
     "items": [],
+    "interacts": [interact_arcade],
     "date": "2016"
 }
 
@@ -44,9 +44,10 @@ room_indiana = {
     "description":
     """----------\n You find yourself standing at the base of a large set of stairs.\n The room around you seems ancient and the walls are covered in carvings which are completely unintelligible to you.\n Atop the stairs you can see a sort of shrine with <key item here> centered on it.\n----------""",
 
-    "exits": {"north": "Book of Eli", "south": "Portal Room", "west": "Enterprise"},
+    "exits": {"north": "Book of Eli", "south": "Portal Room", "west": "Hub"},
 
     "items": [],
+    "interacts": [],
     "date": "1935"
 }
 
@@ -56,9 +57,10 @@ room_SWVST = {
     "description":
     """----------\n Once the light fades you find yourself standing in what appears to be the cockpit of yet another ship.\n Everything appears to be powered down however you hear noises coming from somewhere not far from you, objects seem to being moved and voices raised.\n You cautiously take a quick look around only to be discovered by a being you are unfamiliar with and it appears to be hostile!\n----------""",
 
-    "exits": {"north": "Enterprise", "east": "Portal Room", "west": "Jurassic Park"},
+    "exits": {"north": "Hub", "east": "Portal Room", "west": "Jurassic Park"},
 
-    "items": [item_pen],
+    "items": [],
+    "interacts": [],
     "date": "A long time ago"
 }
 
@@ -70,7 +72,8 @@ room_jurassic = {
 
     "exits": {"north": "Western", "east": "Star Wars V Star Trek", "south": "Inception", "passage": "Sherlock", "trapdoor": "Portal Room"},
 
-    "items": [item_pen],
+    "items": [],
+    "interacts": [],
     "date": "2015"
 }
 
@@ -82,7 +85,8 @@ room_sherlock = {
 
     "exits": {"east": "Mr Robot", "south": "Western", "north": "Shawshank", "passage": "Book of Eli", "trapdoor": "Jurassic Park"},
 
-    "items": [item_pen],
+    "items": [item_vicbook],
+    "interacts": [],
     "date": "2015"
 }
 
@@ -97,7 +101,8 @@ Queen's Buildings.""",
 
     "exits": {"north": "Fight Club", "south": "Indiana Jones", "west": "Mr Robot", "passage": "Portal Room", "trapdoor": "Sherlock"},
 
-    "items": [item_pen],
+    "items": [],
+    "interacts": [],
     "date": "30 years after a nuclear apocalypse"
 }
 
@@ -112,7 +117,8 @@ Queen's Buildings.""",
 
     "exits": {"north": "Indiana Jones", "south": "Matrix", "west": "Star Wars V Star Trek", "passage": "Jurassic Park", "trapdoor": "Book of Eli"},
 
-    "items": [item_pen],
+    "items": [],
+    "interacts": [],
     "date": ""
 }
 
@@ -127,7 +133,8 @@ Queen's Buildings.""",
 
     "exits": {"south": "Portal Room"},
 
-    "items": [item_pen],
+    "items": [],
+    "interacts": [],
     "date": "1999... or is it?"
 }
 
@@ -142,7 +149,8 @@ Queen's Buildings.""",
 
     "exits": {"south": "Jurassic Park"},
 
-    "items": [item_pen],
+    "items": [],
+    "interacts": [],
     "date": "Who knows."
 }
 
@@ -157,7 +165,8 @@ Queen's Buildings.""",
 
     "exits": {"north": "Sherlock"},
 
-    "items": [item_pen],
+    "items": [],
+    "interacts": [],
     "date": "1965"
 }
 room_fight = {
@@ -168,12 +177,13 @@ room_fight = {
 
     "exits": {"north": "Book of Eli"},
 
-    "items": [item_pen],
+    "items": [],
+    "interacts": [],
     "date": "1999"
 }
 
 rooms = {
-    "Enterprise": room_enterprise,
+    "Hub": room_Hub,
     "Western": room_western,
     "Mr Robot": room_robot,
     "Indiana Jones": room_indiana,

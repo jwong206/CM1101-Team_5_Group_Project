@@ -1,51 +1,15 @@
-item_id = {
-    "id": "id",
+item_fragment1 = {
+    "id": "newspaper",
+    "name": "a newspaper page",
+    "description": """A torn newspaper page. The headline reads, "Questionable culture test centre opened...\n...volunteers seek shelter....the new axis advance...."""""}
 
-    "name": "id card",
+item_vicbook = {
+    "id": "book",
+    "name": """an old, thick book titled "The Life of Queen Victoria""",
+    "description":"""You flip open the first page: "Queen Victoria, born 24/05/1819...."""}
 
-    "description":
-    """You new shiny student ID card. Expires 1 June 2017.
-You wonder why they have printed a suicide hotline number on it?..."""
-}
-
-item_laptop = {
-    "id": "laptop",
-
-    "name": "laptop",
-
-    "description":
-    "It has seen better days. At least it has a WiFi card!"
-}
-
-item_money = {
-    "id": "money",
-
-    "name": "money",
-
-    "description":
-    "This wad of cash is barely enough to pay your tuition fees."
-}
-
-item_biscuits = {
-    "id": "biscuits",
-
-    "name": "a pack of biscuits",
-
-    "description": "A pack of biscuits."
-}
-
-item_pen = {
-    "id": "pen",
-    
-    "name": "a pen",
-
-    "description": "A basic ballpoint pen."
-}
-
-item_handbook = {
-    "id": "handbook",
-    
-    "name": "a student handbook",
-
-    "description": "This student handbook explains everything. Seriously."
+item_leaflet = {
+    "id": "leaflet",
+    "name": "a crinkled leaflet",
+    "description":"""There is a picture of a soldier and scientist on the front of the leaflet.\nThe leaflet encourages volunteers to sign on at a "Culture complex" for their own safety.\nOn the back, you can see some questions answered in pen, but the writing is illegible now."""
 }

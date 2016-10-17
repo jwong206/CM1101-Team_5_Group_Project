@@ -3,7 +3,9 @@
 from map import rooms
 from player import *
 from items import *
+from interactions import *
 from gameparser import *
+import config
 import time
 import sys
 import datetime
@@ -12,6 +14,7 @@ global introcount
 inv = []
 
 def introanimation():
+    config.won = False
     global introcount
     intro = "abcdefghabcdefghabcdefghabcdefghabcdefghabcdefghabcdefghx"
     for char in intro:
@@ -174,7 +177,7 @@ def title():
     main_menu()
 
 def main_menu():
-	print("\n               Welcome to -name of game-. Please select an option by typing it below.\n\n                   -NEW GAME- || -LOAD GAME- || -CREDITS- || -QUIT- \n")
+	print("\n               Welcome to -name of game-. Please select an option by typing it below.\n\n                   -NEW GAME- || -CREDITS- || -QUIT- \n")
 	selection = input()
 	if selection == "new" or selection == "new game":
 		print("Starting new game....")
@@ -185,15 +188,11 @@ def main_menu():
 		print("A game by Team 5.\n")
 		time.sleep(1)
 		main_menu()
-	elif selection == "load game" or selection == "load":
-		print("Save game system yet to be implemented.\n")
-		time.sleep(1)
-		main_menu()
 	elif selection == "quit":
-		quit()
+		print("Quitting so soon? We don't think so.")
 		main_menu()
 	else:
-		print("Please cooperate.\n")
+		print("Cooperate.\n")
 		time.sleep(1)
 		main_menu()
 
@@ -259,6 +258,7 @@ def print_inventory_items(items):
 
     """
     print_by_char("You have " + list_of_items(items) +".\n",0.01)
+    time.sleep(1)
 
 
 
@@ -318,11 +318,12 @@ def print_room(room):
     time.sleep(1)
     # Display room description
     print(room["description"])
-    time.sleep(3)
+    time.sleep(2)
     print()
     if print_room_items(room) != None:
         print_by_char(print_room_items(room),0.01)
         print()
+    time.sleep(1)
 
     #
     # COMPLETE ME!
@@ -356,10 +357,10 @@ def print_exit(direction, leads_to):
     >>> print_exit("south", "MJ and Simon's room")
     GO SOUTH to MJ and Simon's room.
     """
-    print_by_char("GO " + direction.upper() + " to " + leads_to + ".",0.01)
+    print("GO " + direction.upper() + " to " + leads_to + ".")
 
 
-def print_menu(exits, room_items, inv_items):
+def print_menu(exits, room_items, inv_items, room_interacts):
     """This function displays the menu of available actions to the player. The
     argument exits is a dictionary of exits as exemplified in map.py. The
     arguments room_items and inv_items are the items lying around in the room
@@ -389,17 +390,19 @@ def print_menu(exits, room_items, inv_items):
     What do you want to do?
 
     """
-    print_by_char("You can:",0.01)
+    print("You can:")
     # Iterate over available exits
     for direction in exits:
         # Print the exit name and where it leads to
         print_exit(direction, exit_leads_to(exits, direction))
     for i in room_items:
-        print_by_char("TAKE " + i["id"].upper() + " to take " + i["name"] + ".",0.01)
+        print("TAKE " + i["id"].upper() + " to take " + i["name"] + ".")
     for i in inv_items:
-        print_by_char("DROP " + i["id"].upper() + " to drop your " + i["name"] + ".",0.01)
+        print("DROP " + i["id"].upper() + " to drop your " + i["name"] + ".")
     for i in inv_items:
-    	print_by_char("EXAMINE " + i["id"].upper() + " to examine " + i["name"] + ".",0.01)
+    	print("EXAMINE " + i["id"].upper() + " to examine " + i["name"] + ".")
+    for i in room_interacts:
+    	print("INTERACT " + i["id"].upper() + " to interact with " + i["name"] + ".")
 
     #
     # COMPLETE ME!
@@ -436,8 +439,10 @@ def execute_go(direction):
     global current_room
     if is_valid_exit(current_room["exits"],direction) == True:
         current_room = move(current_room["exits"],direction)
+        time.sleep(2)
     else:
         print ("You cannot go there.")
+        time.sleep(2)        
 
 
 def execute_take(item_id):
@@ -452,8 +457,10 @@ def execute_take(item_id):
             takeable = True
             inventory.append(i)
             current_room["items"].remove(i)
+            time.sleep(2)
     if takeable == False:
         print("You cannot take that.")
+        time.sleep(2)
     
 
 def execute_drop(item_id):
@@ -467,8 +474,10 @@ def execute_drop(item_id):
             droppable = True
             inventory.remove(i)
             current_room["items"].append(i)
+            time.sleep(2)
     if droppable == False:
         print("You cannot drop that.")
+        time.sleep(2)
 
 def execute_examine(item_id):
 	examinable = False
@@ -476,8 +485,22 @@ def execute_examine(item_id):
 		if i['id'] == item_id:
 			examinable = True
 			print(i['description'])
+			time.sleep(2)
 	if examinable == False:
 		print('You cannot examine that.')
+		time.sleep(2)
+
+def execute_interact(interact_id):
+	interactable = False
+	for i in current_room["interacts"]:
+		if i['id'] == interact_id:
+			interactable = True
+			print("\n")
+			i['action']()
+			time.sleep(2)
+	if interactable == False:
+		print('You cannot interact with that.')
+		time.sleep(2)
 
 def execute_command(command):
     """This function takes a command (a list of words as returned by
@@ -514,11 +537,16 @@ def execute_command(command):
     	else:
     		print('Examine what?')
 
+    elif command[0] == 'interact':
+    	if len(command) > 1:
+    		execute_interact(command[1])
+    	else:
+    		print('Interact with what?')
     else:
         print("This makes no sense.")
 
 
-def menu(exits, room_items, inv_items):
+def menu(exits, room_items, inv_items, room_interacts):
     """This function, given a dictionary of possible exits from a room, and a list
     of items found in the room and carried by the player, prints the menu of
     actions using print_menu() function. It then prompts the player to type an
@@ -528,7 +556,7 @@ def menu(exits, room_items, inv_items):
     """
 
     # Display menu
-    print_menu(exits, room_items, inv_items)
+    print_menu(exits, room_items, inv_items, room_interacts)
 
     # Read player's input
     user_input = input("> ")
@@ -560,16 +588,24 @@ def move(exits, direction):
 def main():
 
     # Main game loop
-    while True:
+    while config.won == False:
         # Display game status (room description, inventory etc.)
         print_room(current_room)
         print_inventory_items(inventory)
 
         # Show the menu with possible actions and ask the player
-        command = menu(current_room["exits"], current_room["items"], inventory)
+        command = menu(current_room["exits"], current_room["items"], inventory, current_room["interacts"])
 
         # Execute the player's command
         execute_command(command)
+    global introcount
+    print_by_char("You hear a loud mechanincal whir and the ceiling begins to open.\nThe floor begins to rise, pushing you towards the outside world.\nYou reach ground level and walk onto the dirt in front of you.\n\n\nWhere are you?",0.02)
+    time.sleep(3)
+    print("\n\n\YOU WON, GG")
+    time.sleep(5)
+    print("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n")
+    introcount = 20
+    introanimation()
 
 def print_by_char(string,wait):
 	for char in string:
@@ -577,6 +613,8 @@ def print_by_char(string,wait):
 		sys.stdout.flush()
 		time.sleep(wait)
 	print()
+
+
 
 introcount = 20
 print_by_char("Initialising....",0.02)
