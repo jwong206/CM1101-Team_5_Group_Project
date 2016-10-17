@@ -22,6 +22,7 @@ room_western = {
     "exits":  {"north": "Sherlock", "east": "Hub", "south": "Jurassic Park"},
 
     "items": [],
+    "interacts": [],
     "date": "March 12th, 1870"
 }
 
