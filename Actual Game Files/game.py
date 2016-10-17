@@ -177,7 +177,7 @@ def title():
     main_menu()
 
 def main_menu():
-	print("\n               Welcome to -name of game-. Please select an option by typing it below.\n\n                   -NEW GAME- || -CREDITS- || -QUIT- \n")
+	print("\n                  Welcome to -name of game-. Please select an option by typing it below.\n\n                                  -NEW GAME- || -CREDITS- || -QUIT- \n")
 	selection = input()
 	if selection == "new" or selection == "new game":
 		print("Starting new game....")
