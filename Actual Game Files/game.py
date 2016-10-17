@@ -395,11 +395,13 @@ def print_menu(exits, room_items, inv_items, room_interacts):
     for i in room_items:
         print("TAKE " + i["id"].upper() + " to take " + i["name"] + ".")
     for i in inv_items:
-        print("DROP " + i["id"].upper() + " to drop your " + i["name"] + ".")
+    	if i != item_notepad:
+        	print("DROP " + i["id"].upper() + " to drop your " + i["name"] + ".")
     for i in inv_items:
     	print("EXAMINE " + i["id"].upper() + " to examine " + i["name"] + ".")
     for i in room_interacts:
     	print("INTERACT " + i["id"].upper() + " to interact with " + i["name"] + ".")
+    print("NOTE to note things in your notepad.")
 
     #
     # COMPLETE ME!
@@ -439,7 +441,19 @@ def execute_go(direction):
         time.sleep(2)
     else:
         print ("You cannot go there.")
-        time.sleep(2)        
+        time.sleep(2) 
+
+def execute_note():
+    """This function, given the direction (e.g. "south") updates the current room
+    to reflect the movement of the player if the direction is a valid exit
+    (and prints the name of the room into which the player is
+    moving). Otherwise, it prints "You cannot go there."
+    """
+    print("Your notepad says:")
+    notes = item_notepad["description"]
+    print(notes)
+    item_notepad["description"] = notes + input("What would you like to add?\n") + "\n"
+    time.sleep(1)        
 
 
 def execute_take(item_id):
@@ -539,6 +553,9 @@ def execute_command(command):
     		execute_interact(command[1])
     	else:
     		print('Interact with what?')
+
+    elif command[0] == 'note':
+    		execute_note()
     else:
         print("This makes no sense.")
 
