@@ -21,8 +21,8 @@ room_robot = {
 
     "exits": {"east": "Book of Eli", "south": "Hub", "west": "Sherlock"},
 
-    "items": [],
-    "interacts": [interact_arcade],
+    "items": [item_phone],
+    "interacts": [interact_arcade, interact_laptop],
     "date": "2016"
 }
 
@@ -35,7 +35,7 @@ room_indiana = {
     "exits": {"north": "Book of Eli", "south": "Fight Club", "west": "Hub"},
 
     "items": [],
-    "interacts": [],
+    "interacts": [interact_tombstone],
     "date": "1935"
 }
 
@@ -48,7 +48,7 @@ room_SW = {
     "exits": {"north": "Hub", "east": "Fight Club", "west": "Jurassic World"},
 
     "items": [],
-    "interacts": [],
+    "interacts": [interact_bb8],
     "date": "A long time ago"
 }
 
@@ -73,7 +73,7 @@ room_sherlock = {
 
     "exits": {"east": "Mr Robot", "south": "Shawshank"},
 
-    "items": [item_vicbook],
+    "items": [item_vicbook, item_violin],
     "interacts": [],
     "date": "2015"
 }
@@ -89,8 +89,8 @@ Queen's Buildings.""",
 
     "exits": {"south": "Indiana Jones", "west": "Mr Robot"},
 
-    "items": [],
-    "interacts": [],
+    "items": [item_ammo],
+    "interacts": [interact_walkietalkie, interact_radio],
     "date": "30 years after a nuclear apocalypse"
 }
 
@@ -105,7 +105,7 @@ Queen's Buildings.""",
 
     "exits": {"north": "Sherlock","south": "Jurassic World"},
 
-    "items": [],
+    "items": [item_shirt, item_photo],
     "interacts": [],
     "date": "1965"
 }
