@@ -619,6 +619,7 @@ def main():
     time.sleep(5)
     print("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n")
     introcount = 20
+    item_notepad["description"] = ""
     introanimation()
 
 def print_by_char(string,wait):
