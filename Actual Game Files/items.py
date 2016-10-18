@@ -1,7 +1,7 @@
 item_fragment1 = {
     "id": "newspaper",
     "name": "a newspaper page",
-    "description": """A torn newspaper page. The headline reads, "Questionable culture test centre opened...\n...volunteers seek shelter....the new axis advance...."""""}
+    "description": """A torn newspaper page. The headline reads, "Questionable culture test centre opened...\n...volunteers seek shelter....conspiracy theories fly...."""""}
 
 item_vicbook = {
     "id": "book",
@@ -11,7 +11,7 @@ item_vicbook = {
 item_leaflet = {
     "id": "leaflet",
     "name": "a crinkled leaflet",
-    "description":"""There is a picture of a soldier and scientist on the front of the leaflet.\nThe leaflet encourages volunteers to sign on at a "Culture complex" for their own safety.\nOn the back, you can see some questions answered in pen, but the writing is illegible now."""}
+    "description":"""There is a picture of a soldier and scientist on the front of the leaflet.\nThe leaflet encourages volunteers to sign on at a "Culture complex" for their own safety.\nOn the back, you can see some questions answered in pen, but the writing is illegible now.\nThere is a slogan at the bottom of the back page; make FREEDOM your purpose!"""}
 
 item_notepad = {
     "id": "notepad",
