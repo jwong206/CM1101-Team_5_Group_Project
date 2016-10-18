@@ -5,7 +5,7 @@ room_Hub = {
     "name": "Hub",
 
     "description":
-    """----------\n You are standing in the hub; the central room in the complex.\n A console stands in the middle of the room.\n Each wall has an electrical doorway leading to other rooms.\n----------""",
+    """----------\n You are standing in what appears to be the command deck of a ship however not a ship from your time.\n You are surrounded by computers that seem to be operating on their own though you have no real\n idea of what they are for.\n After a short while you hear the a humming sound as if something was turning on after which,\n in the four cardinal points of the room, doors open revealing lit up circular pads.\n The light reveals a console standing in the centre of the room, awaiting an input.\n----------""",
 
     "exits": {"south": "Star Wars", "east": "Indiana Jones", "west": "Shawshank", "north": "Mr Robot"},
 
@@ -79,8 +79,8 @@ room_sherlock = {
 
     "exits": {"east": "Mr Robot", "south": "Shawshank"},
 
-    "items": [item_vicbook, item_violin],
-    "interacts": [],
+    "items": [item_violin],
+    "interacts": [interact_book],
 
     "date": "2015"
 }
