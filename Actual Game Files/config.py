@@ -1,1 +1,2 @@
 won = False
+searched = False

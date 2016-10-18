@@ -393,7 +393,7 @@ def print_menu(exits, inv_items, room):
 
     For example, the menu of actions available at the Reception may look like this:
 
-    You can:
+    You can
     GO EAST to your personal tutor's office.
     GO WEST to the parking lot.
     GO SOUTH to MJ and Simon's room.
@@ -405,7 +405,8 @@ def print_menu(exits, inv_items, room):
     What do you want to do?
 
     """
-    #print("You can:")
+    
+    print("You can:")
     # Iterate over available exits
     for direction in exits:
         # Print the exit name and where it leads to
@@ -415,10 +416,12 @@ def print_menu(exits, inv_items, room):
         	print("DROP " + i["id"].upper() + " to drop your " + i["name"] + ".")
     for i in inv_items:
     	print("EXAMINE " + i["id"].upper() + " to examine " + i["name"] + ".")
-    print('SEARCH to search ' + room['name'] + '.')
-    #
-    # COMPLETE ME!
-    #
+    if config.searched:
+        execute_search()
+    else:
+        print('SEARCH to search ' + room['name'] + '.')
+
+
 
     print("What do you want to do?")
 
@@ -471,7 +474,8 @@ def execute_note():
 
 def execute_search():
 
-	print_search(current_room['items'], current_room['interacts'])
+    print_search(current_room['items'], current_room['interacts'])
+    config.searched = True
 
 def execute_take(item_id):
     """This function takes an item_id as an argument and moves this item from the
@@ -637,9 +641,9 @@ def main():
     # Main game loop
     while config.won == False:
         # Display game status (room description, inventory etc.)
+        config.searched = False
         print_room(current_room)
         print_inventory_items(inventory)
-        print('You can: ')
         print_menu(current_room["exits"], inventory, current_room)
 
         command = menu()
