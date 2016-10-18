@@ -416,6 +416,7 @@ def print_menu(exits, inv_items, room):
         	print("DROP " + i["id"].upper() + " to drop your " + i["name"] + ".")
     for i in inv_items:
     	print("EXAMINE " + i["id"].upper() + " to examine " + i["name"] + ".")
+    print('NOTE to add notes.')
     if config.searched:
         execute_search()
     else:
