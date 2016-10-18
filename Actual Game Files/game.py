@@ -180,7 +180,7 @@ def title():
 
 def main_menu():
 
-    print("\n                  Welcome to -name of game-. Please select an option by typing it below.\n\n                                  -NEW GAME- || -CREDITS- || -QUIT- \n")
+    print("\n                  Welcome to SPOK. Please select an option by typing it below.\n\n                                  -NEW GAME- || -CREDITS- || -QUIT- \n")
 
     selection = normalise_input(input('> '))
 
@@ -329,11 +329,11 @@ def print_room(room):
     """
     # Display room name
     print("\n\n")
-    print_by_char("TIME: "+ str(datetime.now().time())[:8],0.01)
+    print_by_char("TIME: "+ str(datetime.now().time())[:8],0.02)
     time.sleep(0.5)
-    print_by_char("DATE: "+room["date"],0.01)
+    print_by_char("DATE: "+room["date"],0.02)
     time.sleep(0.5)
-    print_by_char("LOCATION: "+room["name"].upper(),0.01)
+    print_by_char("LOCATION: "+room["name"].upper(),0.02)
     time.sleep(1)
     # Display room description
     print(room["description"])

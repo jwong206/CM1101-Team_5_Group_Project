@@ -257,7 +257,7 @@ interact_arcade = {
 }
 
 def bb8():
-	print('BB-8 beeps friendly. He displays a hint from Jedi Master Luke Skywalker \n- Look at your hands to dermine your cognitive abilities.')
+	print('BB-8 beeps friendlily. He displays a hint from Jedi Master Luke Skywalker \n-''Study yourself intently to determine what you truly are.''')
 
 interact_bb8 = {
 	'id': 'bb8',
@@ -266,7 +266,7 @@ interact_bb8 = {
 }
 
 def holochess():
-	print("You fiddle with the holochess, the creatures on the board grumble and roar as they slay eachother.")
+	print("You fiddle with the holochess thing, the creatures on the board grumble and roar as they slay eachother.")
 
 interact_holochess = {
 	"id": "holochess",
@@ -275,7 +275,7 @@ interact_holochess = {
 }
 
 def tombstone():
-	print('You read: PROPERTY OF CULTURE COMPLEX. The rest of the writing is illegible.')
+	print('You read whats inscribed on the headstone: PROPERTY OF CULTURE COMPLEX.\n The rest of the writing is illegible.')
 
 interact_tombstone = {
 	'id': 'tombstone',
@@ -299,7 +299,9 @@ interact_crates = {
 
 def walkietalkie():
 	print('Harris, come in. Over.')
+	time.sleep(0.5)
 	print('Harris, come in. Over.')
+	time.sleep(0.5)
 	print('Harris, come in. Over.')
 
 interact_walkietalkie = {
@@ -318,7 +320,7 @@ interact_radio = {
 }
 
 def laptop():
-	print('There is a critical batter warining window open: \nYOUR BATTERY IS RUNNING LOW (6%) \n You click OK. There is a BBC website open. The headline reads: \nSCIENTIST COUPLE OPEN AN AMUSMENT PARK WHERE YOU CAN INTERACT WITH ARTIFICAL BEINGS \nJakobe Franco confirms opening date. \nLaptop hibernates. The battery is dead.')
+	print('There is a critical battery warning window open: \n| YOUR BATTERY IS RUNNING LOW (6%) |\nYou click OK. There is a BBC website open. The headline reads: \nSCIENTIST COUPLE OPEN AN AMUSEMENT PARK WHERE YOU CAN INTERACT WITH ARTIFICIAL BEINGS \nJakobe Franco confirms opening date. \nThe laptop hibernates. The battery is dead.')
 
 interact_laptop = {
 	'id': 'laptop',
@@ -327,7 +329,7 @@ interact_laptop = {
 }
 
 def mirror():
-	print('You look at your reflection in the mirror: \nDark hair, blue eyes, athletic physique. You are handsome.\nYou are wearing a hospital gown with a number on it - 983762.\nYou take a closer look at your hand.\nMovement of your muscles allows your palm to be stretched and compressed.\nYou can feel the blood flowing in your veins.\nYou"'" pretty sure that you are human.")
+	print('You look at your reflection in the mirror: \nDark hair, blue eyes, athletic physique. You are handsome.\nYou are wearing a hospital gown with a number on it - 983762.\nYou take a closer look at your hands.\nMovement of your muscles allows your palm to be stretched and compressed.\nYou can feel the blood flowing in your veins.\nYou''''re pretty sure that you are human.")
 
 interact_mirror = {
 	'id': 'mirror',
@@ -336,7 +338,7 @@ interact_mirror = {
 }
 
 def book():
-	print('''You open the book titled 'Culture Complex's social experiment records'. \nIt includes lists of hundreds of names, numbers, dates and room names.''')
+	print('''You open the 'Culture Complex's social experiment records' book. \nIt includes lists of hundreds of names, numbers, dates and room names.''')
 
 interact_book = {
 	'id': 'book', 
