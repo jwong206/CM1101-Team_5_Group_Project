@@ -1,7 +1,137 @@
 import time
 import config
 import map
+import sys
 import gameparser
+
+def print_by_char(string,wait):
+	for char in string:
+		sys.stdout.write( '%s' % char )
+		sys.stdout.flush()
+		time.sleep(wait)
+	print()
+
+def win(score):
+    print("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n")
+    print("The lights go out, you hear a voice through speakers surrounding you.\n")
+    time.sleep(2)
+    if score == 0:
+        print_by_char("Well....",0.2)
+        time.sleep(2)
+        print_by_char("I don't know what to say...",0.02)
+        time.sleep(1)
+        print_by_char("That... that was such a miserable performance. You know what? I'm just going to let you leave.",0.02)
+        time.sleep(1)
+        print_by_char("Goodbye.",0.02)
+        time.sleep(0.5)
+        print("-------\n\n\n\n")
+        print("You scored 0 out of 8. Thank you for playing, or at least, attempting to.")
+    if score == 1:
+        print_by_char("Well....",0.2)
+        time.sleep(2)
+        print_by_char("If your parents were watching I don't think they'd be proud.",0.02)
+        time.sleep(1)
+        print_by_char("Who knows, maybe they are watching...",0.02)
+        time.sleep(1)
+        print_by_char("Maybe the whole world is watching. Hopefully you'll perform better this time around.",0.02)
+        time.sleep(1)
+        print_by_char("Goodbye.",0.02)
+        time.sleep(0.5)
+        print("-------\n\n\n\n")
+        print("You scored 1 out of 8. Thank you for playing, we're sure you tried your hardest.")
+    if score == 2:
+        print_by_char("Well....",0.2)
+        time.sleep(2)
+        print_by_char("You tried, at least theres that.",0.02)
+        time.sleep(1)
+        print_by_char("You know, we selected you because we thought you had potential.",0.02)
+        time.sleep(1)
+        print_by_char("The potential to do better than this. Prove us right, we do so hate being wrong.",0.02)
+        time.sleep(1)
+        print_by_char("Goodbye.",0.02)
+        time.sleep(0.5)
+        print("-------\n\n\n\n")
+        print("You scored 2 out of 8. Thank you for playing.")
+    if score == 3:
+        print_by_char("Well....",0.2)
+        time.sleep(2)
+        print_by_char("That was thoroughly average.",0.02)
+        time.sleep(1)
+        print_by_char("We wiped your entire memory, yet you remembered how to be practically useless.",0.02)
+        time.sleep(1)
+        print_by_char("Come on Harris, it might just be that the entire world is depending on you.",0.02)
+        time.sleep(1)
+        print_by_char("Goodbye.",0.02)
+        time.sleep(0.5)
+        print("-------\n\n\n\n")
+        print("You scored 3 out of 8. Thank you for playing.")
+    if score == 4:
+        print_by_char("Well....",0.2)
+        time.sleep(2)
+        print_by_char("Good. Not great, not even close. But good.",0.02)
+        time.sleep(1)
+        print_by_char("How are we supposed to test this facility with these results?",0.02)
+        time.sleep(1)
+        print_by_char("We're going to rewipe, hopefully you turn out more impressive this time.",0.02)
+        time.sleep(1)
+        print_by_char("Goodbye.",0.02)
+        time.sleep(0.5)
+        print("-------\n\n\n\n")
+        print("You scored 4 out of 8. Thank you for playing.")
+    if score == 5:
+        print_by_char("Well....",0.2)
+        time.sleep(2)
+        print_by_char("You've performed adequately.",0.02)
+        time.sleep(1)
+        print_by_char("Maybe you're good enough.",0.02)
+        time.sleep(1)
+        print_by_char("No. I don't think so. Not quite. Rerun the tests.",0.02)
+        time.sleep(1)
+        print_by_char("Goodbye.",0.02)
+        time.sleep(0.5)
+        print("-------\n\n\n\n")
+        print("You scored 5 out of 8. Thank you for playing.")
+    if score == 6:
+        print_by_char("Well....",0.2)
+        time.sleep(2)
+        print_by_char("Did you know, you volunteered to come here.",0.02)
+        time.sleep(1)
+        print_by_char("You voluntarily wiped your memory, with the promise of its safe and swift return.",0.02)
+        time.sleep(1)
+        print_by_char("You thought you were here to test a new amusement park, but it's not turned out that way has it.",0.02)
+        time.sleep(1)
+        print_by_char("Goodbye.",0.02)
+        time.sleep(0.5)
+        print("-------\n\n\n\n")
+        print("You scored 6 out of 8. Thank you for playing.")
+    if score == 7:
+        print_by_char("Well....",0.2)
+        time.sleep(2)
+        print_by_char("Harris. A human... You seem to be recovering your bearings sufficiently.",0.02)
+        time.sleep(1)
+        print_by_char("You voluntarily wiped your memory, with the promise of its safe and swift return.",0.02)
+        time.sleep(1)
+        print_by_char("You thought you were here to test a new amusement park, but it's not turned out that way has it.\nThe world is different now Harris, and you have achieved sufficient results to reenter it.\nUnfortunately, we do not have the resources to return your memory.\nSorry about that.",0.02)
+        time.sleep(1)
+        print_by_char("Goodbye.",0.02)
+        time.sleep(0.5)
+        print("-------\n\n\n\n")
+        print("You scored 6 out of 8. Thank you for playing.")
+    if score == 8:
+        print_by_char("Well....",0.2)
+        time.sleep(2)
+        print_by_char("I am impressed. You completed the experiment with flying colours.",0.02)
+        time.sleep(1)
+        print_by_char("We promised the highest performer an explanation, so here it is.",0.02)
+        time.sleep(1)
+        print_by_char("Culture Complex isn't what it seems.\nWe wiped the memories of you and every other volunteer.\nIt was meant to be harmless, temporary! But the world changed.\nNow you've proven yourself to be the most adaptable, we have the resources to return your memory.\nIt is up to you to save us.",0.02)
+        time.sleep(1)
+        print_by_char("Goodbye.",0.02)
+        time.sleep(0.5)
+        print("-------\n\n\n\n")
+        print("You scored 8 out of 8. Congratulations.")
+    time.sleep(10)
+    sys.exit("Game over")
 
 global answer1
 global answer2
@@ -19,14 +149,13 @@ def console():
 	global answer3
 	global answer4
 	global answer5
-	print("\nHello subject. The questions are:\n1) What is your name?\n2) Who created this facility?\n3) What is your purpose?\n4) What is the name of the company operating this facility?\n5) What are you?\n\nAre you ready to answer a question?")
+	print("\nHello subject. The questions are:\n1) What is your name?\n"+answer1+"\n2) Who created this facility?\n"+answer2+"\n3) What is your purpose?\n"+answer3+"\n4) What is the name of the company operating this facility?\n"+answer4+"\n5) What are you?\n"+answer5+"\nAre you ready to answer a question?\n")
 	print("YES")
 	print("NO")
-	print("VIEW answers")
 	print("CLEAR answers")
 	print("SUBMIT answers, this can only be done once.")
-	choice = input()
-	if choice == "yes":
+	choice = gameparser.normalise_input(input())
+	if choice[0] == "yes":
 		print("Please select a question to answer, 1/2/3/4/5:")
 		question = input()
 		if question == "1":
@@ -82,22 +211,18 @@ def console():
 		print("Returning you to menu...")
 		time.sleep(1.4)
 		console()
-	elif choice == "view":
-		print("Here are your current answers:")
-		print("1) What is your name?\n"+answer1+"\n2) Who created this facility?\n"+answer2+"\n3) What is your purpose?\n"+answer3+"\n4) What is the name of the company operating this facility?\n"+answer4+"\n5) What are you?\n"+answer5)
-		time.sleep(3)
-		console()
-	elif choice == "clear":
+	elif choice[0] == "clear":
 		if input("Are you sure you want to clear all of your current answers?\nYES\nNO\n") == "yes":
 			answer1,answer2,answer3,answer4,answer5 = "unanswered"
 			print("Answers cleared.")
 			time.sleep(2)
 			console()
-	elif choice == "no":
+	elif choice[0] == "no":
 		print("Very well. Explore the complex and find the answers. Quickly now.")
-	elif choice == "submit":
+	elif choice[0] == "submit":
 		if input("Are you sure you want to submit your answers?\nYES\nNO\n") == "yes":
 			print("Excellent. Assessing your performance....")
+			time.sleep(2)
 			score = 0
 			if "harris" in gameparser.normalise_input(str(answer1)):
 				score = score+1
@@ -115,13 +240,7 @@ def console():
 				score = score+1
 			if "human" in gameparser.normalise_input(answer5):
 				score = score+1
-			config.won = True
-			config.score = score
-			return
-	else:
-		print("Command not recognised.")
-		console()
-
+			win(score)
 interact_console = {
 	"id": "console",
 	"name":"the console in the centre of the room",
