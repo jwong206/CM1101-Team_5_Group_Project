@@ -375,7 +375,7 @@ def print_search(room_items, room_interacts):
     if print_room_interacts(current_room) != None:
         print(print_room_interacts(current_room))
         print()
-    elif current_room["items"] == None and current_room["interacts"] == None:
+    elif current_room["items"] == [] and current_room["interacts"] == []:
         print("There is nothing here.")
         print()
     for i in room_items:

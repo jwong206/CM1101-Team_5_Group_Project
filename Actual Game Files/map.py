@@ -47,7 +47,7 @@ room_SW = {
     "name": "Millennium Falcon",
 
     "description":
-    """----------\n Once you enter the room you could already tell you've found yourself in what appears to be another ship though nowhere near as flashy as the other.\n What a piece of junk.\n You roam the corridors and this ship until you find yourself in what looks to be a place the crew would use for relaxing.\n There's a mini chess-like table that has active holograms battling atop it.\n----------""",
+    """----------\n Once you enter the room you could already tell you've found yourself in what appears to be\n another ship though nowhere near as flashy as the other.\n What a piece of junk.\n You roam the corridors and this ship until you find yourself in what looks to be a place the crew\n would use for relaxing.\n There's a mini chess-like table that has active holograms battling atop it.\n----------""",
 
     "exits": {"north": "Hub", "east": "Fight Club", "west": "Jurassic World"},
 
@@ -61,7 +61,7 @@ room_jurassic = {
     "name": "Jurassic World",
 
     "description":
-    """----------\n Once you took a step through the exit you have now found yourself standing in a forest.\n You're surrounded by trees and thick bushes and the only sounds you can initially hear are of birds high up in the trees.\n You approach a small cabin which appears to not have been used in a long time.\n The tables, bed and pretty much everything is covered in dust.\n----------""",
+    """----------\n Once you took a step through the exit you have now found yourself standing in a forest.\n You're surrounded by trees and thick bushes and the only sounds you can initially hear are of birds\n high up in the trees.\n You approach a small cabin which appears to not have been used in a long time.\n The tables, bed and pretty much everything is covered in dust.\n----------""",
 
     "exits": {"north": "Shawshank", "east": "Star Wars"},
 
@@ -89,7 +89,7 @@ room_Eli = {
     "name": "West Coast of the United States",
 
     "description":
-    """----------\n You take several steps into this new area.\n As opposed to what you've already seen, this area is desolate, broken.\n The area is filled with old broken objects, small buildings completely in ruin.\n You rummage through some boxes and crates though find nothing but there's still others remaining to be searched.\n----------""",
+    """----------\n You take several steps into this new area.\n As opposed to what you've already seen, this area is desolate, broken.\n The area is filled with old broken objects, small buildings completely in ruin.\n You rummage through some boxes and crates though find nothing but there's still others\n remaining to be searched.\n----------""",
 
     "exits": {"south": "Indiana Jones", "west": "Mr Robot"},
 
@@ -114,7 +114,7 @@ room_fight = {
     "name": "An underground club",
 
     "description":
-    """----------\n You find yourself now standing in what appears to be a basement.\n There is a laid out square in the centre covered in what appears to be blood stains.\n Around the room there are several large crates and large plastic containers labeled 'Fat'.\n You find several scraps of paper, some of which are entitled 'How to make soap', whilst the others contain completely different information.\n----------""",
+    """----------\n You find yourself now standing in what appears to be a basement.\n There is a laid out square in the centre covered in what appears to be blood stains.\n Around the room there are several large crates and large plastic containers labeled 'Fat'.\n You find several scraps of paper, some of which are entitled 'How to make soap', whilst the others\n contain completely different information.\n----------""",
 
     "exits": {"north": "Indiana Jones","west":"Star Wars"},
 
