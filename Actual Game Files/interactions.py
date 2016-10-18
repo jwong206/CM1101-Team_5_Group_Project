@@ -21,40 +21,68 @@ def console():
 				print("That is not correct.")
 		else:
 			print("That is not correct.")
-			
+
 	else:
 		print("Very well. Explore the complex and find the answers. Quickly now.")
 
-interact_console = {"id": "console","name":"the console in the middle of the room","action":console}
+interact_console = {
+	"id": "console",
+	"name":"the console in the middle of the room",
+	"action": console
+}
 
 def arcade():
 	print("You approach the machine and it turns on, practically inviting you to play.\nYou grab the joystick and start tapping buttons until you get a new highscore!\nThe leaderboard proudly displays the score, and next to it you notice a name: Harris")
 
-interact_arcade = {"id": "arcade","name":"the classic arcade game","action":arcade}
+interact_arcade = {
+	"id": "arcade",
+	"name": "the classic arcade game",
+	"action": arcade
+}
 
 def bb8():
 	print('BB-8 beeps friendly. He displays a hint from Jedi Master Luke Skywalker \n- look at your hands to dermine your cognitive abilities.')
 
-interact_bb8 = {'id': 'bb8', 'name': 'a BB-8 droid', 'action': bb8}
+interact_bb8 = {
+	'id': 'bb8',
+	'name': 'a BB-8 droid',
+	'action': bb8
+}
 
 def tombstone():
 	print('Some information. No idea.')
 
-interact_tombstone = {'id': 'tombstone', 'name': 'a tombstone', 'action': tombstone}
+interact_tombstone = {
+	'id': 'tombstone',
+	'name': 'a tombstone',
+	'action': tombstone
+}
 
 def walkietalkie():
 	print('(call sign related to someone), come in. Over.')
 	print('(call sign related to someone), come in. Over.')
 	print('(call sign related to someone), come in. Over.')
 
-interact_walkietalkie = {'id': 'walkietalkie', 'name': 'a walkie-talkie', 'action': walkietalkie}
+interact_walkietalkie = {
+	'id': 'walkietalkie',
+	'name': 'a walkie-talkie',
+	'action': walkietalkie
+}
 
 def radio():
 	print('This is an emergency broadcast. COMPANY NAME servers are down. \nDo not attempt to interact with any artificial beings. \nThis is vital for your safety. \nThis broadcast will repeat in thirty seconds.')
 
-interact_radio = {'id': 'radio', 'name': 'an emergency radio', 'action': radio}
+interact_radio = {
+	'id': 'radio',
+	'name': 'an emergency radio',
+	'action': radio
+}
 
 def laptop():
 	print('IDEA. Put something here.')
 
-interact_laptop = {'id': 'laptop', 'name': 'a laptop', 'action': laptop}
+interact_laptop = {
+	'id': 'laptop',
+	'name': 'a laptop',
+	'action': laptop
+}

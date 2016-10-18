@@ -6,10 +6,12 @@ room_Hub = {
 
     "description":
     """----------\n You are standing in the hub; the central room in the complex.\n A console stands in the middle of the room.\n Each wall has an electrical doorway leading to other rooms.\n----------""",
+
     "exits": {"south": "Star Wars", "east": "Indiana Jones", "west": "Shawshank", "north": "Mr Robot"},
 
     "items": [item_fragment1],
     "interacts": [interact_console],
+
     "date": "Unknown"
 }
 
@@ -23,6 +25,7 @@ room_robot = {
 
     "items": [item_phone],
     "interacts": [interact_arcade, interact_laptop],
+
     "date": "2016"
 }
 
@@ -36,6 +39,7 @@ room_indiana = {
 
     "items": [],
     "interacts": [interact_tombstone],
+
     "date": "1935"
 }
 
@@ -49,7 +53,8 @@ room_SW = {
 
     "items": [],
     "interacts": [interact_bb8],
-    "date": "A long time ago"
+
+    "date": "A long time ago..."
 }
 
 room_jurassic = {
@@ -62,6 +67,7 @@ room_jurassic = {
 
     "items": [],
     "interacts": [],
+
     "date": "2020"
 }
 
@@ -75,6 +81,7 @@ room_sherlock = {
 
     "items": [item_vicbook, item_violin],
     "interacts": [],
+
     "date": "2015"
 }
 
@@ -83,9 +90,9 @@ room_Eli = {
 
     "description":
     """You are standing next to the cashier's till at
-30-36 Newport Road. The cashier looks at you with hope
-in their eyes. If you go west you can return to the
-Queen's Buildings.""",
+    30-36 Newport Road. The cashier looks at you with hope
+    in their eyes. If you go west you can return to the
+    Queen's Buildings.""",
 
     "exits": {"south": "Indiana Jones", "west": "Mr Robot"},
 

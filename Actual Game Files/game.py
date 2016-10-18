@@ -18,38 +18,40 @@ def introanimation():
     global introcount
     intro = "abcdefghabcdefghabcdefghabcdefghabcdefghabcdefghabcdefghx"
     for char in intro:
-        introcount=introcount-1
+        introcount = introcount - 1
         time.sleep(0.01)
         if introcount == 0:
-            print("Loading complete. Welcome.")
-            time.sleep(2)
+            print("Loading complete.\n\n")
+            time.sleep(1)
+            print_by_char("Welcome.",0.02)
+            time.sleep(1.5)
             title()
             break
-        time.sleep(0.01)
+        time.sleep(0.006)
         if char is "a":
             print("\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\")
-        time.sleep(0.01)
+        time.sleep(0.006)
         if char is "b":
             print(" \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\")
-        time.sleep(0.01)
+        time.sleep(0.006)
         if char is "c":
             print("  \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\")
-        time.sleep(0.01)
+        time.sleep(0.006)
         if char is "d":
             print("   \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\")
-        time.sleep(0.01)
+        time.sleep(0.006)
         if char is "e":
             print("   ////////////////////////////////////////")
-        time.sleep(0.01)
+        time.sleep(0.006)
         if char is "f":
             print("  ////////////////////////////////////////")
-        time.sleep(0.01)
+        time.sleep(0.006)
         if char is "g":
             print(" ////////////////////////////////////////")
-        time.sleep(0.01)
+        time.sleep(0.006)
         if char is "h":
             print("////////////////////////////////////////")
-        time.sleep(0.01)
+        time.sleep(0.006)
         if char is "x":
             print("Loading...")
             time.sleep(0.01)
@@ -151,7 +153,7 @@ def title():
     time.sleep(0.02)
     print("   |  \                                        \    |    /                                        /  |")
     time.sleep(0.02)
-    print("   |   \                                        |   |   |                                        /   |")    
+    print("   |   \                                        |   |   |                                        /   |")
     time.sleep(0.02)
     print("   |    \                                       |   |   |                                       /    |")
     time.sleep(0.02)
@@ -177,24 +179,37 @@ def title():
     main_menu()
 
 def main_menu():
-	print("\n                  Welcome to -name of game-. Please select an option by typing it below.\n\n                                  -NEW GAME- || -CREDITS- || -QUIT- \n")
-	selection = input()
-	if selection == "new" or selection == "new game":
-		print("Starting new game....")
-		time.sleep(2)
-		print("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n")
-		main()
-	elif selection == "credits":
-		print("A game by Team 5.\n")
-		time.sleep(1)
-		main_menu()
-	elif selection == "quit":
-		print("Quitting so soon? We don't think so.")
-		main_menu()
-	else:
-		print("Cooperate.\n")
-		time.sleep(1)
-		main_menu()
+
+    print("\n                  Welcome to -name of game-. Please select an option by typing it below.\n\n                                  -NEW GAME- || -CREDITS- || -QUIT- \n")
+
+    selection = normalise_input(input('> '))
+
+    parsed_input = ''
+    count = 0 # Count for adding spaces
+    for x in selection:
+        parsed_input = parsed_input + x
+        count = count + 1
+        if count <= (len(selection) - 1): # Only Adds a space inbetween words if theres more than 1 word in input
+            parsed_input = parsed_input + ' '
+
+    selection = parsed_input
+
+    if selection == "new" or selection == "new game":
+        print("Starting new game...")
+        time.sleep(1)
+        print("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n")
+        main()
+    elif selection == "credits":
+        print("A game by Team 5.\n")
+        time.sleep(1)
+        main_menu()
+    elif selection == "quit":
+        print("Quitting so soon? We don't think so.")
+        main_menu()
+    else:
+        print("Cooperate.\n")
+        time.sleep(1)
+        main_menu()
 
 def list_of_items(items):
     """This function takes a list of items (see items.py for the definition) and
@@ -309,11 +324,11 @@ def print_room(room):
     """
     # Display room name
     print("\n\n")
-    print_by_char("TIME: "+ str(datetime.now().time())[:8],0.02)
-    time.sleep(1)
-    print_by_char("DATE: "+room["date"],0.02)
-    time.sleep(1)
-    print_by_char("LOCATION: "+room["name"].upper(),0.02)
+    print_by_char("TIME: "+ str(datetime.now().time())[:8],0.01)
+    time.sleep(0.5)
+    print_by_char("DATE: "+room["date"],0.01)
+    time.sleep(0.5)
+    print_by_char("LOCATION: "+room["name"].upper(),0.01)
     time.sleep(1)
     # Display room description
     print(room["description"])
@@ -321,10 +336,6 @@ def print_room(room):
     if print_room_items(room) != None:
         print(print_room_items(room),0.01)
         print()
-
-    #
-    # COMPLETE ME!
-    #
 
 def exit_leads_to(exits, direction):
     """This function takes a dictionary of exits and a direction (a particular
@@ -406,7 +417,7 @@ def print_menu(exits, room_items, inv_items, room_interacts):
     #
     # COMPLETE ME!
     #
-    
+
     print("What do you want to do?")
 
 
@@ -438,10 +449,10 @@ def execute_go(direction):
     global current_room
     if is_valid_exit(current_room["exits"],direction) == True:
         current_room = move(current_room["exits"],direction)
-        time.sleep(2)
+        time.sleep(1)
     else:
         print ("You cannot go there.")
-        time.sleep(2) 
+        time.sleep(1.5)
 
 def execute_note():
     """This function, given the direction (e.g. "south") updates the current room
@@ -453,7 +464,8 @@ def execute_note():
     notes = item_notepad["description"]
     print(notes)
     item_notepad["description"] = notes + input("What would you like to add?\n") + "\n"
-    time.sleep(1)        
+    print('\nAdded to notepad.')
+    time.sleep(1)
 
 
 def execute_take(item_id):
@@ -468,11 +480,12 @@ def execute_take(item_id):
             takeable = True
             inventory.append(i)
             current_room["items"].remove(i)
-            time.sleep(2)
+            print("You have taken " + i['name'] + ".")
+            time.sleep(1.2)
     if takeable == False:
         print("You cannot take that.")
-        time.sleep(2)
-    
+        time.sleep(1.5)
+
 
 def execute_drop(item_id):
     """This function takes an item_id as an argument and moves this item from the
@@ -485,21 +498,28 @@ def execute_drop(item_id):
             droppable = True
             inventory.remove(i)
             current_room["items"].append(i)
-            time.sleep(2)
+            print("You have dropped the " + i['id'] + ".")
+            time.sleep(1.2)
     if droppable == False:
         print("You cannot drop that.")
-        time.sleep(2)
+        time.sleep(1.5)
 
 def execute_examine(item_id):
-	examinable = False
-	for i in inventory:
-		if i['id'] == item_id:
-			examinable = True
-			print(i['description'])
-			time.sleep(2)
-	if examinable == False:
-		print('You cannot examine that.')
-		time.sleep(2)
+    examinable = False
+    for i in inventory:
+        if i['id'] == item_id:
+            examinable = True
+            print(i['description'])
+            # Added varying wait time for reading item description
+            if len((i['description'].split())) >= 20:
+                time.sleep(8)
+            elif len((i['description'].split())) >= 10:
+                time.sleep(4)
+            else:
+                time.sleep(2)
+    if examinable == False:
+        print('You cannot examine that.')
+        time.sleep(1.5)
 
 def execute_interact(interact_id):
 	interactable = False
@@ -511,7 +531,7 @@ def execute_interact(interact_id):
 			time.sleep(2)
 	if interactable == False:
 		print('You cannot interact with that.')
-		time.sleep(2)
+		time.sleep(1.5)
 
 def execute_command(command):
     """This function takes a command (a list of words as returned by
@@ -529,36 +549,41 @@ def execute_command(command):
             execute_go(command[1])
         else:
             print("Go where?")
+            time.sleep(0.8)
 
     elif command[0] == "take":
         if len(command) > 1:
             execute_take(command[1])
         else:
             print("Take what?")
+            time.sleep(0.8)
 
     elif command[0] == "drop":
         if len(command) > 1:
             execute_drop(command[1])
         else:
             print("Drop what?")
+            time.sleep(0.8)
 
     elif command[0] == 'examine':
     	if len(command) > 1:
     		execute_examine(command[1])
     	else:
-    		print('Examine what?')
+            print('Examine what?')
+            time.sleep(0.8)
 
     elif command[0] == 'interact':
     	if len(command) > 1:
     		execute_interact(command[1])
     	else:
     		print('Interact with what?')
+            #time.sleep(0.8) -- WHY DOESN'T THIS LINE WORK?!
 
     elif command[0] == 'note':
     		execute_note()
     else:
         print("This makes no sense.")
-
+        time.sleep(0.8)
 
 def menu(exits, room_items, inv_items, room_interacts):
     """This function, given a dictionary of possible exits from a room, and a list
@@ -632,10 +657,10 @@ def print_by_char(string,wait):
 
 
 introcount = 20
-print_by_char("Initialising....",0.02)
-time.sleep(1)
-print_by_char("Loading....",0.02)
-time.sleep(2)
+print_by_char("Initialising...",0.02)
+time.sleep(0.5)
+print_by_char("Loading...",0.02)
+time.sleep(1.2)
 # Are we being run as a script? If so, run main().
 # '__main__' is the name of the scope in which top-level code executes.
 # See https://docs.python.org/3.4/library/__main__.html for explanation
