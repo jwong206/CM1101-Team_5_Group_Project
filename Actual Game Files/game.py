@@ -411,7 +411,7 @@ def print_menu(exits, inv_items):
 
     For example, the menu of actions available at the Reception may look like this:
 
-    You can:
+    You can
     GO EAST to your personal tutor's office.
     GO WEST to the parking lot.
     GO SOUTH to MJ and Simon's room.
@@ -698,6 +698,7 @@ def main():
     # Main game loop
     while config.won == False:
         # Display game status (room description, inventory etc.)
+        config.searched = False
         print_room(current_room)
         command = menu(current_room["exits"], inventory)
         execute_command(command)
