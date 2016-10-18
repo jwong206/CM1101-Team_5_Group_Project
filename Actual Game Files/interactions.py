@@ -169,8 +169,8 @@ def crates():
     'id':'records',
     'name': 'an experiment record page',
     'description': 'You read: \nNAME: Harris \nNUMBER: 983762 \nSTATUS: Experiment interrupted.'}
-	print("You open the crates, revealing their contents; a <placeholder pineapple>.")
-	map.room_indiana["items"].append(item_pineapple)
+	print("You open the crates, revealing their contents; an experiment record page.")
+	map.room_indiana["items"].append(item_records)
 
 interact_crates = {
 	"id": "crates",

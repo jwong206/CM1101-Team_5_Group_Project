@@ -79,8 +79,8 @@ room_sherlock = {
 
     "exits": {"east": "Mr Robot", "south": "Shawshank"},
 
-    "items": [item_vicbook, item_violin],
-    "interacts": [],
+    "items": [item_violin],
+    "interacts": [interact_book],
 
     "date": "2015"
 }

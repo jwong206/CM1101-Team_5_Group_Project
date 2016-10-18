@@ -33,13 +33,13 @@ item_ammo = {
 item_shirt = {
     'id': 'shirt',
     'name': 'an inmate shirt',
-    'description': 'There is a name and number on the shirt: \nHARRIS \n983762.'
+    'description': 'There is a name and number on the shirt: \nHARRIS \n983762'
 }
 
 item_photo = {
     'id': 'photo',
-    'name': 'a family photo',
-    'description': 'It depicts a happy couple standing next to a triceraptos. They look familiar. \nOn the back of the photo there is an inscription: \nFounders of Culture Complex in Jurrasic Park during tests on artifical beings.'
+    'name': 'a photo',
+    'description': 'It depicts a happy couple standing next to a triceraptos. They look familiar. \nOn the back of the photo there is an inscription: \nFounders of Culture Complex in Jurrasic World during tests on artifical beings.'
 }
 
 item_phone = {
@@ -51,12 +51,12 @@ item_phone = {
 item_page = {
     'id': 'page', 
     'name': 'a torn magazine page',
-    'description': '''The headline reads: 'Criticism of movie-based theme park that is about to open'.'''
+    'description': '''It is an article. The headline reads: 'Criticism of movie-based theme park that is about to open'.'''
 }
 item_magazine = {
     'id': 'magazine',
     'name': 'a magazine', 
-    'description': '''There is a couple on the cover of the Entrepreneur magazine. It reads: \n'HOW WE DID IT. \nNew era of amusment parks.'''
+    'description': '''There is a couple on the cover of the Entrepreneur magazine. It reads: \nHOW WE DID IT \nNew era of amusment parks.'''
 }
 
 
