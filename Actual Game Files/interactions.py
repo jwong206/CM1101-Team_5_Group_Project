@@ -165,10 +165,10 @@ interact_tombstone = {
 }
 
 def crates():
-	item_pineapple = {
-    'id':'pineapple',
-    'name': 'a pineapple',
-    'description': 'A placeholder object'}
+	item_records = {
+    'id':'records',
+    'name': 'an experiment record page',
+    'description': 'You read: \nNAME: Harris \nNUMBER: 983762 \nSTATUS: Experiment interrupted.'}
 	print("You open the crates, revealing their contents; a <placeholder pineapple>.")
 	map.room_indiana["items"].append(item_pineapple)
 
@@ -217,10 +217,10 @@ interact_mirror = {
 }
 
 def book():
-	print('')
+	print('''You open the book titled 'Culture Complex's social experiment records'. \nIt includes lists of hundreds of names, numbers, dates and room names.''')
 
 interact_book = {
 	'id': 'book', 
-	'name': 'The Return of Sherlock Holmes',
+	'name': 'a book',
 	'action': book
 }
