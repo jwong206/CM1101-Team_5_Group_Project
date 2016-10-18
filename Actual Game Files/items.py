@@ -21,13 +21,13 @@ item_notepad = {
 item_violin = {
     'id': 'violin',
     'name': 'an old, hand carved violin',
-    'description': 'There is an engraver on the back of the violin - Property of NAME OF THE COMPANY'
+    'description': 'There is an engraver on the back of the violin - Property of ESTHER FRANCO'
 }
 
 item_ammo = {
     'id': 'ammo',
     'name': 'an old ammo can',
-    'description': 'There is an inscription on the lid of the ammo can: \n200 CARTRIDGES \n7.62MM, M13 \nCARTONS \n1 M62-4 M80 \nPROPERTY OF NAME THE COMPANY'
+    'description': 'There is an inscription on the lid of the ammo can: \n200 CARTRIDGES \n7.62MM, M13 \nCARTONS \n1 M62-4 M80 \nPROPERTY OF CULTURE COMPLEX'
 }
 
 item_shirt = {
@@ -45,7 +45,7 @@ item_photo = {
 item_phone = {
     'id':'phone',
     'name': 'a phone',
-    'description': 'Text message?'
+    'description': 'There is a text message: \nTen minutes ago \nESTHER \nJakobe, where are you? \nI am waiting for you in the conference room. \nWe are introducing ten new characters. \nNew investors are here. Hurry up!'
 }
 
 

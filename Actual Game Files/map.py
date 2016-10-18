@@ -119,7 +119,7 @@ room_fight = {
     "exits": {"north": "Indiana Jones","west":"Star Wars"},
 
     "items": [],
-    "interacts": [],
+    "interacts": [interact_mirror],
     "date": "1999"
 }
 

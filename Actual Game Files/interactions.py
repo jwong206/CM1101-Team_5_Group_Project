@@ -60,7 +60,7 @@ interact_holochess = {
 }
 
 def tombstone():
-	print('Some information. No idea.')
+	print('You read: PROPERTY OF CULTURE COMPLEX. The rest of the writing is illegible.')
 
 interact_tombstone = {
 	'id': 'tombstone',
@@ -83,9 +83,9 @@ interact_crates = {
 }
 
 def walkietalkie():
-	print('(call sign related to someone), come in. Over.')
-	print('(call sign related to someone), come in. Over.')
-	print('(call sign related to someone), come in. Over.')
+	print('Harris, come in. Over.')
+	print('Harris, come in. Over.')
+	print('Harris, come in. Over.')
 
 interact_walkietalkie = {
 	'id': 'walkietalkie',
@@ -103,10 +103,18 @@ interact_radio = {
 }
 
 def laptop():
-	print('IDEA. Put something here.')
+	print('There is a critical batter warining window open: \nYOUR BATTERY IS RUNNING LOW (6%) \n You click OK. There is a BBC website open. The headline reads: \nSCIENTIST COUPLE OPEN AN AMUSMENT PARK WHERE YOU CAN INTERACT WITH ARTIFICAL BEINGS \nJakobe Franco confirms opening date. \nLaptop hibernates. The battery is dead.')
 
 interact_laptop = {
 	'id': 'laptop',
 	'name': 'a laptop',
 	'action': laptop
+}
+
+def mirror():
+	print('You look at your reflection in the mirror: \nDark hair, blue eyes, athletic physique. You are handsome.\nYou are wearing a hospital gown with a number on it - 983762.\nYou take a closer look at your hand.\nMovement of your muscles allows your palm to be stretched and compressed.\nYou can feel the blood flowing in your veins.')
+interact_mirror = {
+	'id': 'mirror',
+	'name': 'a mirror'
+	'action': mirror
 }
