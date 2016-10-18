@@ -33,12 +33,12 @@ room_indiana = {
     "name": "The Temple of Doom",
 
     "description":
-    """----------\n You find yourself standing at the base of a large set of stairs.\n The room around you seems ancient and the walls are covered in carvings which are completely unintelligible to you.\n Atop the stairs you can see a sort of shrine with <key item here> centered on it.\n----------""",
+    """----------\n You find yourself standing at the base of a large set of stairs.\n The room around you seems ancient and the walls are covered in carvings which are completely\n unintelligible to you.\n Atop the stairs you can see a sort of shrine with <key item here> centered on it.\n There are several crates littered around this shrine that seem out of place.\n----------""",
 
     "exits": {"north": "Book of Eli", "south": "Fight Club", "west": "Hub"},
 
     "items": [],
-    "interacts": [interact_tombstone],
+    "interacts": [interact_tombstone, interact_crates],
 
     "date": "1935"
 }
@@ -47,12 +47,12 @@ room_SW = {
     "name": "Millennium Falcon",
 
     "description":
-    """----------\n Once the light fades you find yourself standing in what appears to be the cockpit of yet another ship.\n Everything appears to be powered down however you hear noises coming from somewhere not far from you, objects seem to being moved and voices raised.\n You cautiously take a quick look around only to be discovered by a being you are unfamiliar with and it appears to be hostile!\n----------""",
+    """----------\n Once you enter the room you could already tell you've found yourself in what appears to be another ship though nowhere near as flashy as the other.\n What a piece of junk.\n You roam the corridors and this ship until you find yourself in what looks to be a place the crew would use for relaxing.\n There's a mini chess-like table that has active holograms battling atop it.\n----------""",
 
     "exits": {"north": "Hub", "east": "Fight Club", "west": "Jurassic World"},
 
     "items": [],
-    "interacts": [interact_bb8],
+    "interacts": [interact_bb8, interact_holochess],
 
     "date": "A long time ago..."
 }
@@ -61,7 +61,7 @@ room_jurassic = {
     "name": "Jurassic World",
 
     "description":
-    """----------\n Once you took a step through the exit you have now found yourself standing in a forest.\n You're surrounded by trees and thick bushes and the only sounds you can initially hear are of birds high up in the trees.\n After a short period of brief inspection you begin to get the feeling that you are being watched.\n----------""",
+    """----------\n Once you took a step through the exit you have now found yourself standing in a forest.\n You're surrounded by trees and thick bushes and the only sounds you can initially hear are of birds high up in the trees.\n You approach a small cabin which appears to not have been used in a long time.\n The tables, bed and pretty much everything is covered in dust.\n----------""",
 
     "exits": {"north": "Shawshank", "east": "Star Wars"},
 
@@ -89,10 +89,7 @@ room_Eli = {
     "name": "West Coast of the United States",
 
     "description":
-    """You are standing next to the cashier's till at
-    30-36 Newport Road. The cashier looks at you with hope
-    in their eyes. If you go west you can return to the
-    Queen's Buildings.""",
+    """----------\n You take several steps into this new area.\n As opposed to what you've already seen, this area is desolate, broken.\n The area is filled with old broken objects, small buildings completely in ruin.\n You rummage through some boxes and crates though find nothing but there's still others remaining to be searched.\n----------""",
 
     "exits": {"south": "Indiana Jones", "west": "Mr Robot"},
 
@@ -105,10 +102,7 @@ room_shawshank = {
     "name": "Shawshank State Penitentiary",
 
     "description":
-    """You are standing next to the cashier's till at
-30-36 Newport Road. The cashier looks at you with hope
-in their eyes. If you go west you can return to the
-Queen's Buildings.""",
+    """----------\n You enter the room and it becomes clear you are suddenly in a prison cell block.\n Each individual cell is opened slightly with no prisoners in sight.\n The area is littered with old clothing from both prisoners and guards.\n You approach the guard's desk to find it cluttered with magazines, torn up papers and some books.\n----------""",
 
     "exits": {"north": "Sherlock","south": "Jurassic World"},
 
@@ -120,7 +114,7 @@ room_fight = {
     "name": "An underground club",
 
     "description":
-    """----------\n After taking the exit you come to find yourself laying face first on the floor with a loud ringing sound in your ears which is followed by a wave of pain.\n It takes a few moments but you finally begin to hear again however it is faded yelling at first which gradually becomes more clear.\n Pulling yourself to your feet you find yourself standing in a darkened room surrounded by yelling spectators as you come face to face with a man who shoves you back somewhat and looks as if he is ready to fight!\n----------""",
+    """----------\n You find yourself now standing in what appears to be a basement.\n There is a laid out square in the centre covered in what appears to be blood stains.\n Around the room there are several large crates and large plastic containers labeled 'Fat'.\n You find several scraps of paper, some of which are entitled 'How to make soap', whilst the others contain completely different information.\n----------""",
 
     "exits": {"north": "Indiana Jones","west":"Star Wars"},
 
@@ -139,6 +133,4 @@ rooms = {
     "Book of Eli": room_Eli,
     "Shawshank": room_shawshank,
     "Fight Club": room_fight
-
-
 }

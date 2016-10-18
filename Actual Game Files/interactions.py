@@ -1,5 +1,6 @@
 import time
 import config
+import map
 
 def win():
 	time.sleep(1)
@@ -49,6 +50,15 @@ interact_bb8 = {
 	'action': bb8
 }
 
+def holochess():
+	print("You fiddle with the holochess, the creatures on the board grumble and roar as they slay eachother.")
+
+interact_holochess = {
+	"id": "holochess",
+	"name": "the holochess board",
+	"action": holochess
+}
+
 def tombstone():
 	print('Some information. No idea.')
 
@@ -56,6 +66,20 @@ interact_tombstone = {
 	'id': 'tombstone',
 	'name': 'a tombstone',
 	'action': tombstone
+}
+
+def crates():
+	item_pineapple = {
+    'id':'pineapple',
+    'name': 'a pineapple',
+    'description': 'A placeholder object'}
+	print("You open the crates, revealing their contents; a <placeholder pineapple>.")
+	map.room_indiana["items"].append(item_pineapple)
+
+interact_crates = {
+	"id": "crates",
+	"name":"some wooden crates",
+	"action":crates
 }
 
 def walkietalkie():

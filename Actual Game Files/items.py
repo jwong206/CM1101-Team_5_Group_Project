@@ -16,7 +16,7 @@ item_leaflet = {
 item_notepad = {
     "id": "notepad",
     "name": "a notepad",
-    "description":""}
+    "description":"The notepad has written on it:\n"}
 
 item_violin = {
     'id': 'violin',
@@ -47,3 +47,6 @@ item_phone = {
     'name': 'a phone',
     'description': 'Text message?'
 }
+
+
+
