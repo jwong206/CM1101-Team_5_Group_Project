@@ -257,7 +257,7 @@ interact_arcade = {
 }
 
 def bb8():
-	print('BB-8 beeps friendly. He displays a hint from Jedi Master Luke Skywalker \n- look at your hands to dermine your cognitive abilities.')
+	print('BB-8 beeps friendly. He displays a hint from Jedi Master Luke Skywalker \n- Look at your hands to dermine your cognitive abilities.')
 
 interact_bb8 = {
 	'id': 'bb8',
@@ -284,12 +284,12 @@ interact_tombstone = {
 }
 
 def crates():
-	item_pineapple = {
-    'id':'pineapple',
-    'name': 'a pineapple',
-    'description': 'A placeholder object'}
-	print("You open the crates, revealing their contents; a <placeholder pineapple>.")
-	map.room_indiana["items"].append(item_pineapple)
+	item_records = {
+    'id':'records',
+    'name': 'an experiment record page',
+    'description': 'You read: \nNAME: Harris \nNUMBER: 983762 \nSTATUS: Experiment interrupted.'}
+	print("You open the crates, revealing their contents; an experiment record page.")
+	map.room_indiana["items"].append(item_records)
 
 interact_crates = {
 	"id": "crates",
@@ -336,10 +336,10 @@ interact_mirror = {
 }
 
 def book():
-	print('')
+	print('''You open the book titled 'Culture Complex's social experiment records'. \nIt includes lists of hundreds of names, numbers, dates and room names.''')
 
 interact_book = {
 	'id': 'book', 
-	'name': 'The Return of Sherlock Holmes',
+	'name': 'a book',
 	'action': book
 }
