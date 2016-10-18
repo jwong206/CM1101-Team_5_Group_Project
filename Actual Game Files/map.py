@@ -65,7 +65,7 @@ room_jurassic = {
 
     "exits": {"north": "Shawshank", "east": "Star Wars"},
 
-    "items": [],
+    "items": [item_photo],
     "interacts": [],
 
     "date": "2020"
@@ -106,7 +106,7 @@ room_shawshank = {
 
     "exits": {"north": "Sherlock","south": "Jurassic World"},
 
-    "items": [item_shirt, item_photo],
+    "items": [item_shirt, item_page, item_magazine],
     "interacts": [],
     "date": "1965"
 }

@@ -94,7 +94,7 @@ interact_walkietalkie = {
 }
 
 def radio():
-	print('This is an emergency broadcast. COMPANY NAME servers are down. \nDo not attempt to interact with any artificial beings. \nThis is vital for your safety. \nThis broadcast will repeat in thirty seconds.')
+	print('''This is an emergency broadcast. Culture Complex's servers are down. \nDo not attempt to interact with any artificial beings. \nThis is vital for your safety. \nThis broadcast will repeat in thirty seconds.''')
 
 interact_radio = {
 	'id': 'radio',
@@ -118,4 +118,13 @@ interact_mirror = {
 	'id': 'mirror',
 	'name': 'a mirror',
 	'action': mirror
+}
+
+def book():
+	print('')
+
+interact_book = {
+	'id': 'book', 
+	'name': 'The Return of Sherlock Holmes',
+	'action': book
 }
