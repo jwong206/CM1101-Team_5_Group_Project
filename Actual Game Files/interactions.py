@@ -138,7 +138,7 @@ interact_arcade = {
 }
 
 def bb8():
-	print('BB-8 beeps friendly. He displays a hint from Jedi Master Luke Skywalker \n- look at your hands to dermine your cognitive abilities.')
+	print('BB-8 beeps friendly. He displays a hint from Jedi Master Luke Skywalker \n- Look at your hands to dermine your cognitive abilities.')
 
 interact_bb8 = {
 	'id': 'bb8',
