@@ -15,8 +15,8 @@ item_leaflet = {
 
 item_notepad = {
     "id": "notepad",
-    "name": "a notepad",
-    "description":"The notepad has written on it:\n"}
+    "name": "your notepad",
+    "description":"This is what the notepad has written on it:\n"}
 
 item_violin = {
     'id': 'violin',
@@ -49,14 +49,12 @@ item_phone = {
 }
 
 item_page = {
-    'id': 'page', 
+    'id': 'page',
     'name': 'a torn magazine page',
     'description': '''The headline reads: 'Criticism of movie-based theme park that is about to open'.'''
 }
 item_magazine = {
     'id': 'magazine',
-    'name': 'a magazine', 
+    'name': 'a magazine',
     'description': '''There is a couple on the cover of the Entrepreneur magazine. It reads: \n'HOW WE DID IT. \nNew era of amusment parks.'''
 }
-
-

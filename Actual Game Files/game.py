@@ -257,13 +257,13 @@ def print_room_items(room):
     Note: <BLANKLINE> here means that doctest should expect a blank line.
 
     """
-    itemlist ="There is " + list_of_items(room["items"]) + " here.\n"
-    if itemlist != "There is "+" here.\n":
+    itemlist =" There is " + list_of_items(room["items"]) + " here.\n"
+    if itemlist != " There is " + " here.\n":
         print(itemlist)
 
 def print_room_interacts(room):
-    interactlist ="You can interact with " + list_of_items(room["interacts"]) + " here.\n"
-    if interactlist != "You can interact with "+" here.\n":
+    interactlist =" You can interact with " + list_of_items(room["interacts"]) + " here.\n"
+    if interactlist != " You can interact with "+" here.\n":
         print(interactlist)
 
 
@@ -366,7 +366,7 @@ def print_exit(direction, leads_to):
     >>> print_exit("south", "MJ and Simon's room")
     GO SOUTH to MJ and Simon's room.
     """
-    print("GO " + direction.upper() + " to " + leads_to + ".")
+    print(" GO " + direction.upper() + " to " + leads_to + ".")
 
 def print_search(room_items, room_interacts):
     if print_room_items(current_room) != None:
@@ -378,19 +378,20 @@ def print_search(room_items, room_interacts):
     elif current_room["items"] == [] and current_room["interacts"] == []:
         print("There is nothing here.")
         print()
+    print('You can:')
     for i in room_items:
-        print("TAKE " + i["id"].upper() + " to take " + i["name"] + ".")
+        print(" TAKE " + i["id"].upper() + " to take " + i["name"] + ".")
     for i in room_interacts:
-        print("INTERACT " + i["id"].upper() + " to interact with " + i["name"] + ".")
-    print("RETURN to stop searching the room.")
+        print(" INTERACT " + i["id"].upper() + " to interact with " + i["name"] + ".")
+    print(" RETURN to stop searching the room.")
 
 def print_inventory(inventory):
     for i in inventory:
         if i != item_notepad:
-            print("DROP " + i["id"].upper() + " to drop " + i["name"] + ".")
+            print(" DROP " + i["id"].upper() + " to drop " + i["name"] + ".")
     for i in inventory:
-        print("EXAMINE " + i["id"].upper() + " to examine " + i["name"] + ".")
-    print("RETURN to close your inventory.")
+        print(" EXAMINE " + i["id"].upper() + " to examine " + i["name"] + ".")
+    print(" RETURN to close your inventory.")
 
 
 def print_menu(exits, inv_items):
@@ -428,14 +429,11 @@ def print_menu(exits, inv_items):
     for direction in exits:
         # Print the exit name and where it leads to
         print_exit(direction, exit_leads_to(exits, direction))
-    print("INVENTORY to open your inventory.")
-    print('SEARCH to search ' + current_room['name'] + '.')
-    print("NOTE to add to your notepad.")
-    #
-    # COMPLETE ME!
-    #
+    print(" INVENTORY to open your inventory.")
+    print(' SEARCH to search ' + current_room['name'] + '.')
+    print(" NOTE to add to your notepad.")
 
-    print("What do you want to do?")
+    print("\nWhat do you want to do?")
 
 
 def is_valid_exit(exits, chosen_exit):
@@ -466,6 +464,7 @@ def execute_go(direction):
     global current_room
     if is_valid_exit(current_room["exits"],direction) == True:
         current_room = move(current_room["exits"],direction)
+        print(('\nGoing ' + str(direction)) + '...')
         time.sleep(1)
     else:
         print ("You cannot go there.")
@@ -479,14 +478,16 @@ def execute_note():
     """
     notes = item_notepad["description"]
     print(notes)
-    item_notepad["description"] = notes + input("What would you like to add?\n") + "\n"
+    item_notepad["description"] = notes + input("What would you like to add to your notepad?\n") + "\n"
     print('\nAdded to notepad.')
     time.sleep(1)
 
 def execute_search():
     print()
+    print('You searched the room...\n')
     print_search(current_room['items'], current_room['interacts'])
-    command = normalise_input(input())
+    print('\nWhat do you want to do?')
+    command = normalise_input(input('> '))
     if command[0] == "take":
         if len(command) > 1:
             execute_take(command[1])
@@ -501,15 +502,18 @@ def execute_search():
         else:
             print('Interact with what?')
     elif command[0] == 'return':
-        print("Returning to room...")
+        print("\nReturning to room...")
         time.sleep(1)
     else:
         print("That doesn't make sense.")
 
 def execute_inventory():
     print()
+    print_inventory_items(inventory)
+    print('You can:')
     print_inventory(inventory)
-    command = normalise_input(input())
+    print('\nWhat do you want to do?')
+    command = normalise_input(input('> '))
     if command[0] == "drop":
         if len(command) > 1:
             execute_drop(command[1])
@@ -524,7 +528,7 @@ def execute_inventory():
         else:
             print('Examine what?')
     elif command[0] == 'return':
-        print("Returning to room...")
+        print("\nReturning to room...")
         time.sleep(1)
     else:
         print("That doesn't make sense.")
@@ -640,7 +644,7 @@ def execute_command(command):
     		execute_interact(command[1])
     	else:
     		print('Interact with what?')
-            #time.sleep(0.8) -- WHY DOESN'T THIS LINE WORK?!
+            #time.sleep(0.8) #-- WHY DOESN'T THIS LINE WORK?!
 
     elif command[0] == 'search':
     		execute_search()
@@ -667,7 +671,7 @@ def menu(exits, inv_items):
     print_menu(exits, inv_items)
 
     # Read player's input
-    user_input = input()
+    user_input = input('> ')
 
     # Normalise the input
     normalised_user_input = normalise_input(user_input)
@@ -720,7 +724,7 @@ def print_by_char(string,wait):
 
 
 introcount = 20
-print_by_char("Initialising...",0.02)
+print_by_char("Initialising...",0.01)
 time.sleep(0.5)
 print_by_char("Loading...",0.02)
 time.sleep(1.2)
