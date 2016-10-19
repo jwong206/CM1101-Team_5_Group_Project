@@ -139,18 +139,20 @@ global answer2
 global answer3
 global answer4
 global answer5
-answer1 = "unanswered"
-answer2 = "unanswered"
-answer3 = "unanswered"
-answer4 = "unanswered"
-answer5 = "unanswered"
+answer1 = "Unanswered"
+answer2 = "Unanswered"
+answer3 = "Unanswered"
+answer4 = "Unanswered"
+answer5 = "Unanswered"
 def console():
 	global answer1
 	global answer2
 	global answer3
 	global answer4
 	global answer5
-	print("\n///////////////////////////\n\nHello subject. The questions are:\n\n1) What is your name?\n"+answer1+"\n2) Who created this facility?\n"+answer2+"\n3) What is your purpose?\n"+answer3+"\n4) What is the name of the company operating this facility?\n"+answer4+"\n5) What are you?\n"+answer5+"\n\n///////////////////////////")
+	print("\n///////////////////////////\n")
+	print("Hello subject. The questions are:\n")
+	print(" 1) What is your name?\n" + '  > ' + answer1 + "\n\n 2) Who created this facility?\n"+ '  > ' + answer2 + "\n\n 3) What is your purpose?\n" + '  > ' + answer3 + "\n\n 4) What is the name of the company operating this facility?\n" + '  > ' + answer4 + "\n\n 5) What are you?\n" + '  > ' + answer5 + "\n\n///////////////////////////")
 	print('\nAre you ready to answer a question?')
 	print('\nYou can type:')
 	print(" YES")
@@ -165,7 +167,7 @@ def console():
 			print("Please select a question to answer, 1/2/3/4/5:")
 			question = input('> ')
 			if question == "1":
-				if answer1 == "unanswered":
+				if answer1 == "Unanswered":
 					print("What is your name?")
 					answer1 = input('> ')
 				else:
@@ -175,7 +177,7 @@ def console():
 						print("What is your name?")
 						answer1 = input('> ')
 			if question == "2":
-				if answer2 == "unanswered":
+				if answer2 == "Unanswered":
 					print("Who created this facility?")
 					answer2 = input('> ')
 				else:
@@ -185,7 +187,7 @@ def console():
 						print("Who created this facility?")
 						answer2 = input('> ')
 			if question == "3":
-				if answer3 == "unanswered":
+				if answer3 == "Unanswered":
 					print("What is your purpose?")
 					answer3 = input('> ')
 				else:
@@ -195,7 +197,7 @@ def console():
 						print("What is your purpose?")
 						answer3 = input('> ')
 			if question == "4":
-				if answer4 == "unanswered":
+				if answer4 == "Unanswered":
 					print("What is the name of the company operating this facility?")
 					answer4 = input('> ')
 				else:
@@ -205,7 +207,7 @@ def console():
 						print("What is the name of the company operating this facility?")
 						answer4 = input('> ')
 			if question == "5":
-				if answer5 == "unanswered":
+				if answer5 == "Unanswered":
 					print("What are you?")
 					answer5 = input('> ')
 				else:
@@ -219,7 +221,7 @@ def console():
 			console()
 		elif choice[0] == "clear":
 			if 'yes' in gameparser.normalise_input(input("Are you sure you want to clear all of your current answers?\nYES\nNO\n")):
-				answer1,answer2,answer3,answer4,answer5 = "unanswered"
+				answer1,answer2,answer3,answer4,answer5 = "Unanswered"
 				print("Answers cleared.")
 				time.sleep(1.5)
 				console()
