@@ -333,21 +333,31 @@ def execute_search():
     command = normalise_input(input('> '))
     if type(command) == list:
         if command[0] == "take":
-            execute_take(command[1])
-            execute_search()
-            time.sleep(0.8)
+            if len(command) > 1:
+                execute_take(command[1])
+                execute_search()
+                time.sleep(0.8)
+            else:
+                print("Take what?")
+                time.sleep(0.8)
+                execute_search()
         elif command[0] == 'interact':
             if len(command) > 1:
                 execute_interact(command[1])
                 execute_search()
+            else:
+                print("Interact with what?")
+                time.sleep(0.8)
+                execute_search()
         elif command[0] == 'return':
             print("\nReturning to room...")
-            time.sleep(1)
+            time.sleep(0.8)
         elif command[0] == "note":
             config.execute_note()
             execute_search()
         else:
             print("That doesn't make sense.")
+            execute_search()
     elif command == None:
         execute_search()
 
@@ -364,25 +374,32 @@ def execute_inventory():
     command = normalise_input(input('> '))
     if type(command) == list:
         if command[0] == "drop":
-            execute_drop(command[1])
-            execute_inventory()
+            if len(command) > 1:
+                execute_drop(command[1])
+                execute_inventory()
+            else:
+                print("Drop what?")
+                time.sleep(0.8)
+                execute_inventory()
         elif command[0] == 'examine':
             if len(command) > 1:
                 execute_examine(command[1])
                 execute_inventory()
             else:
                 print('Examine what?')
+                time.sleep(0.8)
+                execute_inventory()
         elif command[0] == 'return':
             print("\nReturning to room...")
-            time.sleep(1)
+            time.sleep(0.8)
         elif command[0] == "note":
             config.execute_note()
             execute_inventory()
         else:
             print("That doesn't make sense.")
+            execute_inventory()
     elif command == None:
         execute_inventory()
-
 
 
 def execute_take(item_id):
@@ -449,42 +466,11 @@ def execute_interact(interact_id):
 
 def execute_command(command):
 
-    if 0 == len(command):
-        return
-
     if command[0] == "go":
         if len(command) > 1:
             execute_go(command[1])
         else:
             print("Go where?")
-            time.sleep(0.8)
-
-    elif command[0] == "take":
-        if len(command) > 1:
-            execute_take(command[1])
-        else:
-            print("Take what?")
-            time.sleep(0.8)
-
-    elif command[0] == "drop":
-        if len(command) > 1:
-            execute_drop(command[1])
-        else:
-            print("Drop what?")
-            time.sleep(0.8)
-
-    elif command[0] == 'examine':
-    	if len(command) > 1:
-    		execute_examine(command[1])
-    	else:
-            print('Examine what?')
-            time.sleep(0.8)
-
-    elif command[0] == 'interact':
-        if len(command) > 1:
-            execute_interact(command[1])
-        else:
-            print('Interact with what?')
             time.sleep(0.8)
 
     elif command[0] == 'search':
