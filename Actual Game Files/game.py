@@ -182,30 +182,24 @@ def main_menu():
 
     print("\n                  Welcome to SPOK. Please select an option by typing it below.\n\n                                  -NEW GAME- || -CREDITS- || -QUIT- \n")
 
-    selection = normalise_input(input('> '))
-
-    parsed_input = ''
-    count = 0 # Count for adding spaces
-    for x in selection:
-        parsed_input = parsed_input + x
-        count = count + 1
-        if count <= (len(selection) - 1): # Only Adds a space inbetween words if theres more than 1 word in input
-            parsed_input = parsed_input + ' '
-
-    selection = parsed_input
-
-    if selection == "new" or selection == "new game":
-        print("Starting new game...")
-        time.sleep(1)
-        print("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n")
-        main()
-    elif selection == "credits":
-        print("A game by Team 5.\n")
-        time.sleep(1)
-        main_menu()
-    elif selection == "quit":
-        print("Quitting so soon? We don't think so.")
-        main_menu()
+    selection = normalise_input(input())
+    if type(selection) == list:    
+        if "new" in selection:
+            print("Starting new game...")
+            time.sleep(1)
+            print("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n")
+            main()
+        elif "credits" in selection:
+            print("A game by Team 5.\n")
+            time.sleep(1)
+            main_menu()
+        elif "quit" in selection:
+            print("Quitting so soon? We don't think so.")
+            main_menu()
+        else:
+            print("Cooperate.\n")
+            time.sleep(1)
+            main_menu()
     else:
         print("Cooperate.\n")
         time.sleep(1)
@@ -328,7 +322,7 @@ def print_room(room):
     Note: <BLANKLINE> here means that doctest should expect a blank line.
     """
     # Display room name
-    print("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n")
+    print("\n\n\n---------------------------\n\n\n")
     print_by_char("TIME: "+ str(datetime.now().time())[:8],0.04)
     time.sleep(0.5)
     print_by_char("DATE: "+room["date"],0.04)
@@ -383,6 +377,7 @@ def print_search(room_items, room_interacts):
         print(" TAKE " + i["id"].upper() + " to take " + i["name"] + ".")
     for i in room_interacts:
         print(" INTERACT " + i["id"].upper() + " to interact with " + i["name"] + ".")
+    print(" NOTE to add to your notepad.")
     print(" RETURN to stop searching the room.")
 
 def print_inventory(inventory):
@@ -391,6 +386,7 @@ def print_inventory(inventory):
             print(" DROP " + i["id"].upper() + " to drop " + i["name"] + ".")
     for i in inventory:
         print(" EXAMINE " + i["id"].upper() + " to examine " + i["name"] + ".")
+    print(" NOTE to add to your notepad.")
     print(" RETURN to close your inventory.")
 
 
@@ -470,20 +466,10 @@ def execute_go(direction):
         print ("You cannot go there.")
         time.sleep(1.5)
 
-def execute_note():
-    """This function, given the direction (e.g. "south") updates the current room
-    to reflect the movement of the player if the direction is a valid exit
-    (and prints the name of the room into which the player is
-    moving). Otherwise, it prints "You cannot go there."
-    """
-    notes = item_notepad["description"]
-    print(notes)
-    item_notepad["description"] = notes + input("What would you like to add to your notepad?\n") + "\n"
-    print('\nAdded to notepad.')
-    time.sleep(1)
+
 
 def execute_search():
-    print("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n")
+    print("\n\n\n---------------------------\n\n\n")
     print('You searched the room...\n')
     print_search(current_room['items'], current_room['interacts'])
     print('\nWhat do you want to do?')
@@ -501,13 +487,16 @@ def execute_search():
         elif command[0] == 'return':
             print("\nReturning to room...")
             time.sleep(1)
+        elif command[0] == "note":
+            config.execute_note()
+            execute_search()
         else:
             print("That doesn't make sense.")
     elif command == None:
         execute_search()
 
 def execute_inventory():
-    print("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n")
+    print("\n\n\n---------------------------\n\n\n")
     print_inventory_items(inventory)
     print('You can:')
     print_inventory(inventory)
@@ -527,6 +516,9 @@ def execute_inventory():
         elif command[0] == 'return':
             print("\nReturning to room...")
             time.sleep(1)
+        elif command[0] == "note":
+            config.execute_note()
+            execute_inventory()
         else:
             print("That doesn't make sense.")
     elif command == None:
@@ -653,7 +645,7 @@ def execute_command(command):
             execute_inventory()
 
     elif command[0] == 'note':
-    		execute_note()
+    		config.execute_note()
     else:
         print("This makes no sense.")
         time.sleep(0.8)
