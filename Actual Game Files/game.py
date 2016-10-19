@@ -328,12 +328,12 @@ def print_room(room):
     Note: <BLANKLINE> here means that doctest should expect a blank line.
     """
     # Display room name
-    print("\n\n")
-    print_by_char("TIME: "+ str(datetime.now().time())[:8],0.02)
+    print("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n")
+    print_by_char("TIME: "+ str(datetime.now().time())[:8],0.04)
     time.sleep(0.5)
-    print_by_char("DATE: "+room["date"],0.02)
+    print_by_char("DATE: "+room["date"],0.04)
     time.sleep(0.5)
-    print_by_char("LOCATION: "+room["name"].upper(),0.02)
+    print_by_char("LOCATION: "+room["name"].upper(),0.04)
     time.sleep(1)
     # Display room description
     print(room["description"])
@@ -483,55 +483,55 @@ def execute_note():
     time.sleep(1)
 
 def execute_search():
-    print()
+    print("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n")
     print('You searched the room...\n')
     print_search(current_room['items'], current_room['interacts'])
     print('\nWhat do you want to do?')
-    command = normalise_input(input('> '))
-    if command[0] == "take":
-        if len(command) > 1:
+    print()
+    command = normalise_input(input())
+    if type(command) == list:
+        if command[0] == "take":
             execute_take(command[1])
             execute_search()
-        else:
-            print("Take what?")
             time.sleep(0.8)
-    elif command[0] == 'interact':
-        if len(command) > 1:
-            execute_interact(command[1])
-            execute_search()
+        elif command[0] == 'interact':
+            if len(command) > 1:
+                execute_interact(command[1])
+                execute_search()
+        elif command[0] == 'return':
+            print("\nReturning to room...")
+            time.sleep(1)
         else:
-            print('Interact with what?')
-    elif command[0] == 'return':
-        print("\nReturning to room...")
-        time.sleep(1)
-    else:
-        print("That doesn't make sense.")
+            print("That doesn't make sense.")
+    elif command == None:
+        execute_search()
 
 def execute_inventory():
-    print()
+    print("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n")
     print_inventory_items(inventory)
     print('You can:')
     print_inventory(inventory)
     print('\nWhat do you want to do?')
+    print()
     command = normalise_input(input('> '))
-    if command[0] == "drop":
-        if len(command) > 1:
+    if type(command) == list:   
+        if command[0] == "drop":
             execute_drop(command[1])
             execute_inventory()
+        elif command[0] == 'examine':
+            if len(command) > 1:
+                execute_examine(command[1])
+                execute_inventory()
+            else:
+                print('Examine what?')
+        elif command[0] == 'return':
+            print("\nReturning to room...")
+            time.sleep(1)
         else:
-            print("Drop what?")
-            time.sleep(0.8)
-    elif command[0] == 'examine':
-        if len(command) > 1:
-            execute_examine(command[1])
-            execute_inventory()
-        else:
-            print('Examine what?')
-    elif command[0] == 'return':
-        print("\nReturning to room...")
-        time.sleep(1)
-    else:
-        print("That doesn't make sense.")
+            print("That doesn't make sense.")
+    elif command == None:
+        execute_inventory()
+    
 
 
 def execute_take(item_id):
