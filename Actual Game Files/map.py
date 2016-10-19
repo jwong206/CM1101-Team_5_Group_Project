@@ -102,7 +102,7 @@ room_shawshank = {
     "name": "Shawshank State Penitentiary",
 
     "description":
-    """----------\n You enter the room and it becomes clear you are suddenly in a prison cell block.\n Each individual cell is opened slightly with no prisoners in sight.\n The area is littered with old clothing from both prisoners and guards.\n You approach the guard's desk and found a cluttered mess of magazines, torn up papers and some books.\n----------""",
+    """----------\n You enter the room and it becomes clear you are suddenly in a prison cell block.\n Each individual cell is opened slightly with no prisoners in sight.\n The area is littered with old clothing from both prisoners and guards.\n You approach the guard's desk and find a cluttered mess of magazines, torn up papers and some books.\n----------""",
 
     "exits": {"north": "Sherlock","south": "Jurassic World"},
 
