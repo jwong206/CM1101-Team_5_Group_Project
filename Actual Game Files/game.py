@@ -513,6 +513,7 @@ def execute_inventory():
                 execute_inventory()
             else:
                 print('Examine what?')
+                execute_inventory()
         elif command[0] == 'return':
             print("\nReturning to room...")
             time.sleep(1)

@@ -2,7 +2,7 @@ Welcome to SPOK©,a game by Team 5™
 
     /|\
    /S|P\
- <------->
+ <---+--->
    \O|K/
     \|/
 
