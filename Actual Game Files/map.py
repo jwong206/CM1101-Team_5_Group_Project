@@ -5,7 +5,7 @@ room_Hub = {
     "name": "Hub",
 
     "description":
-    """----------\n You are standing in what appears to be the command deck of a ship, however it is not a ship from your time.\n You are surrounded by computers that seem to be operating on their own, though you have no real\n idea of what they are for.\n After a short while you hear a humming sound as if something were turning on after which,\n in the four cardinal points of the room, doors open revealing lit up circular pads.\n The light reveals a console standing in the centre of the room, awaiting an input.\n You should search the room.\n----------""",
+    """----------\n You are standing in what appears to be the command deck of a ship, however it is not\n a ship from your time.\n You are surrounded by computers that seem to be operating on their own, though you have no real\n idea of what they are for.\n After a short while you hear a humming sound as if something were turning on after which,\n in the four cardinal points of the room, doors open revealing lit up circular pads.\n The light reveals a console standing in the centre of the room, awaiting an input.\n You should search the room.\n----------""",
 
     "exits": {"south": "Star Wars", "east": "Indiana Jones", "west": "Shawshank", "north": "Mr Robot"},
 
@@ -33,7 +33,7 @@ room_indiana = {
     "name": "The Temple of Doom",
 
     "description":
-    """----------\n You find yourself standing at the base of a large set of stairs.\n There are several crates littered around this shrine that seem out of place.\n----------""",
+    """----------\n You find yourself standing at the base of a large set of stairs.\n The room around you seems ancient and the walls are covered in carvings which are completely\n unintelligible to you.\n There are several crates littered around this shrine that seem out of place.\n----------""",
 
     "exits": {"north": "Book of Eli", "south": "Fight Club", "west": "Hub"},
 
