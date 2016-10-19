@@ -33,7 +33,7 @@ room_indiana = {
     "name": "The Temple of Doom",
 
     "description":
-    """----------\n You find yourself standing at the base of a large set of stairs.\n The room around you seems ancient and the walls are covered in carvings which are completely\n unintelligible to you.\n Atop the stairs you can see a sort of shrine with <key item here> centered on it.\n There are several crates littered around this shrine that seem out of place.\n----------""",
+    """----------\n You find yourself standing at the base of a large set of stairs.\n There are several crates littered around this shrine that seem out of place.\n----------""",
 
     "exits": {"north": "Book of Eli", "south": "Fight Club", "west": "Hub"},
 

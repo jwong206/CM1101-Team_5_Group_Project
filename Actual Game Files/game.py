@@ -194,7 +194,7 @@ def main_menu():
             print()
             print_by_char("A game by Team 5.\n\n", 0.02)
             time.sleep(0.5)
-            print_by_char("Charlie Bennet\nKonstancja Andrzejewska\nWill Sambells\nJoshua Wong\nMark thomlinson\nCiara Swift\nKieran Fewell\n", 0.02)
+            print_by_char("Charlie Bennett\nKonstancja Andrzejewska\nWill Sambells\nJoshua Wong\nMark Tomlinson\nCiara Swift\nKieran Fewell\n", 0.02)
             time.sleep(0.5)
             print_by_char("Honorable Mention:\nRobin Watson\n", 0.02)
             time.sleep(0.5)
@@ -208,6 +208,8 @@ def main_menu():
             print("Cooperate.\n")
             time.sleep(1)
             main_menu()
+    else:
+        main_menu()
 
 def list_of_items(items):
 
@@ -241,11 +243,11 @@ def print_room(room):
     # Display room name
     print("\n\n\n---------------------------\n\n\n")
 
-    print_by_char("TIME: "+ str(datetime.now().time())[:8],0.04)
+    print_by_char("TIME: "+ str(datetime.now().time())[:8],0.03)
     time.sleep(0.5)
-    print_by_char("DATE: "+room["date"],0.04)
+    print_by_char("DATE: "+room["date"],0.03)
     time.sleep(0.5)
-    print_by_char("LOCATION: "+room["name"].upper(),0.04)
+    print_by_char("LOCATION: "+room["name"].upper(),0.03)
     time.sleep(0.7)
     # Display room description
     print(room["description"])
@@ -357,6 +359,7 @@ def execute_search():
             execute_search()
         else:
             print("That doesn't make sense.")
+            time.sleep(0.8)
             execute_search()
     elif command == None:
         execute_search()
@@ -397,6 +400,7 @@ def execute_inventory():
             execute_inventory()
         else:
             print("That doesn't make sense.")
+            time.sleep(0.8)
             execute_inventory()
     elif command == None:
         execute_inventory()
