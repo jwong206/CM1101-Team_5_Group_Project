@@ -180,7 +180,7 @@ def title():
 
 def main_menu():
 
-    print("\n                  Welcome to SPOK. Please select an option by typing it below.\n\n                                  -NEW GAME- || -CREDITS- || -QUIT- \n")
+    print("\n                      Welcome to SPOK. Please select an option by typing it below.\n\n                                  -NEW GAME- || -CREDITS- || -QUIT- \n")
 
     selection = normalise_input(input())
     if type(selection) == list:    
@@ -477,12 +477,21 @@ def execute_search():
     command = normalise_input(input())
     if type(command) == list:
         if command[0] == "take":
-            execute_take(command[1])
-            execute_search()
-            time.sleep(0.8)
+            if len(command) > 1:
+                execute_take(command[1])
+                execute_search()
+                time.sleep(0.8)
+            else:
+                print("Take what?")
+                time.sleep(1)
+                execute_search()
         elif command[0] == 'interact':
             if len(command) > 1:
                 execute_interact(command[1])
+                execute_search()
+            else:
+                print("Interact with what?")
+                time.sleep(1)
                 execute_search()
         elif command[0] == 'return':
             print("\nReturning to room...")
@@ -492,6 +501,7 @@ def execute_search():
             execute_search()
         else:
             print("That doesn't make sense.")
+            execute_search()
     elif command == None:
         execute_search()
 
@@ -505,14 +515,20 @@ def execute_inventory():
     command = normalise_input(input('> '))
     if type(command) == list:   
         if command[0] == "drop":
-            execute_drop(command[1])
-            execute_inventory()
+            if len(command) > 1:
+                execute_drop(command[1])
+                execute_inventory()
+            else:
+                print("Drop what?")
+                time.sleep(1)
+                execute_inventory()
         elif command[0] == 'examine':
             if len(command) > 1:
                 execute_examine(command[1])
                 execute_inventory()
             else:
                 print('Examine what?')
+                time.sleep(1)
                 execute_inventory()
         elif command[0] == 'return':
             print("\nReturning to room...")
@@ -522,6 +538,7 @@ def execute_inventory():
             execute_inventory()
         else:
             print("That doesn't make sense.")
+            execute_inventory()
     elif command == None:
         execute_inventory()
     
@@ -600,44 +617,12 @@ def execute_command(command):
     execute_take, or execute_drop, supplying the second word as the argument.
 
     """
-
-    if 0 == len(command):
-        return
-
     if command[0] == "go":
         if len(command) > 1:
             execute_go(command[1])
         else:
             print("Go where?")
             time.sleep(0.8)
-
-    elif command[0] == "take":
-        if len(command) > 1:
-            execute_take(command[1])
-        else:
-            print("Take what?")
-            time.sleep(0.8)
-
-    elif command[0] == "drop":
-        if len(command) > 1:
-            execute_drop(command[1])
-        else:
-            print("Drop what?")
-            time.sleep(0.8)
-
-    elif command[0] == 'examine':
-    	if len(command) > 1:
-    		execute_examine(command[1])
-    	else:
-            print('Examine what?')
-            time.sleep(0.8)
-
-    elif command[0] == 'interact':
-    	if len(command) > 1:
-    		execute_interact(command[1])
-    	else:
-    		print('Interact with what?')
-            #time.sleep(0.8) #-- WHY DOESN'T THIS LINE WORK?!
 
     elif command[0] == 'search':
     		execute_search()
