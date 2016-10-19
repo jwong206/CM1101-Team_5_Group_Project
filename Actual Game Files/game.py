@@ -58,7 +58,7 @@ def introanimation():
             introanimation()
 
 def title():
-    print("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n")
+    print("\n" * 15)
     print("--------------------------------------------------------------------------------------------------------")
     time.sleep(0.02)
     print("   |             /                                  |                                  \             |")
@@ -180,7 +180,7 @@ def title():
 
 def main_menu():
 
-    print("\n                  Welcome to SPOK. Please select an option by typing it below.\n\n                                  -NEW GAME- || -CREDITS- || -QUIT- \n")
+    print("\n                      Welcome to SPOK. Please select an option by typing it below.\n\n                                  -NEW GAME- || -CREDITS- || -QUIT- \n")
 
     selection = normalise_input(input('> '))
 
@@ -197,10 +197,14 @@ def main_menu():
     if selection == "new" or selection == "new game":
         print("Starting new game...")
         time.sleep(1)
-        print("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n")
+        print("\n" * 72)
         main()
     elif selection == "credits":
-        print("A game by Team 5.\n")
+        print()
+        print_by_char("A game by Team 5.\n\n", 0.02)
+        time.sleep(0.5)
+        print_by_char("Charlie Bennet\nKonstancja Andrzejewska\nWill Sambells\nJoshua Wong\nMark thomlinson\nCiara Swift\nKieran Fewell\n", 0.02)
+        print_by_char("Honorable Mention:\nRobin Watson", 0.02)
         time.sleep(1)
         main_menu()
     elif selection == "quit":
@@ -328,7 +332,7 @@ def print_room(room):
     Note: <BLANKLINE> here means that doctest should expect a blank line.
     """
     # Display room name
-    print("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n")
+    print("\n" * 49)
     print_by_char("TIME: "+ str(datetime.now().time())[:8],0.04)
     time.sleep(0.5)
     print_by_char("DATE: "+room["date"],0.04)
@@ -483,7 +487,7 @@ def execute_note():
     time.sleep(1)
 
 def execute_search():
-    print("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n")
+    print("\n" * 30)
     print('You searched the room...\n')
     print_search(current_room['items'], current_room['interacts'])
     print('\nWhat do you want to do?')
@@ -507,14 +511,14 @@ def execute_search():
         execute_search()
 
 def execute_inventory():
-    print("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n")
+    print("\n" * 30)
     print_inventory_items(inventory)
     print('You can:')
     print_inventory(inventory)
     print('\nWhat do you want to do?')
     print()
     command = normalise_input(input('> '))
-    if type(command) == list:   
+    if type(command) == list:
         if command[0] == "drop":
             execute_drop(command[1])
             execute_inventory()
@@ -531,7 +535,7 @@ def execute_inventory():
             print("That doesn't make sense.")
     elif command == None:
         execute_inventory()
-    
+
 
 
 def execute_take(item_id):

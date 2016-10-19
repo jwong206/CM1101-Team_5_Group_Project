@@ -16,7 +16,7 @@ def win(score):
     print("The lights go out, you hear a voice through speakers surrounding you.\n")
     time.sleep(2)
     if score == 0:
-        print_by_char("Well....",0.2)
+        print_by_char("Well...",0.2)
         time.sleep(2)
         print_by_char("I don't know what to say...",0.02)
         time.sleep(1)
@@ -27,7 +27,7 @@ def win(score):
         print("-------\n\n\n\n")
         print("You scored 0 out of 8. Thank you for playing, or at least, attempting to.")
     if score == 1:
-        print_by_char("Well....",0.2)
+        print_by_char("Well...",0.2)
         time.sleep(2)
         print_by_char("If your parents were watching I don't think they'd be proud.",0.02)
         time.sleep(1)
@@ -40,7 +40,7 @@ def win(score):
         print("-------\n\n\n\n")
         print("You scored 1 out of 8. Thank you for playing, we're sure you tried your hardest.")
     if score == 2:
-        print_by_char("Well....",0.2)
+        print_by_char("Well...",0.2)
         time.sleep(2)
         print_by_char("You tried, at least theres that.",0.02)
         time.sleep(1)
@@ -53,7 +53,7 @@ def win(score):
         print("-------\n\n\n\n")
         print("You scored 2 out of 8. Thank you for playing.")
     if score == 3:
-        print_by_char("Well....",0.2)
+        print_by_char("Well...",0.2)
         time.sleep(2)
         print_by_char("That was thoroughly average.",0.02)
         time.sleep(1)
@@ -66,7 +66,7 @@ def win(score):
         print("-------\n\n\n\n")
         print("You scored 3 out of 8. Thank you for playing.")
     if score == 4:
-        print_by_char("Well....",0.2)
+        print_by_char("Well...",0.2)
         time.sleep(2)
         print_by_char("Good. Not great, not even close. But good.",0.02)
         time.sleep(1)
@@ -79,7 +79,7 @@ def win(score):
         print("-------\n\n\n\n")
         print("You scored 4 out of 8. Thank you for playing.")
     if score == 5:
-        print_by_char("Well....",0.2)
+        print_by_char("Well...",0.2)
         time.sleep(2)
         print_by_char("You've performed adequately.",0.02)
         time.sleep(1)
@@ -92,7 +92,7 @@ def win(score):
         print("-------\n\n\n\n")
         print("You scored 5 out of 8. Thank you for playing.")
     if score == 6:
-        print_by_char("Well....",0.2)
+        print_by_char("Well...",0.2)
         time.sleep(2)
         print_by_char("Did you know, you volunteered to come here.",0.02)
         time.sleep(1)
@@ -105,7 +105,7 @@ def win(score):
         print("-------\n\n\n\n")
         print("You scored 6 out of 8. Thank you for playing.")
     if score == 7:
-        print_by_char("Well....",0.2)
+        print_by_char("Well...",0.2)
         time.sleep(2)
         print_by_char("Harris. A human... You seem to be recovering your bearings sufficiently.",0.02)
         time.sleep(1)
@@ -116,9 +116,9 @@ def win(score):
         print_by_char("Goodbye.",0.02)
         time.sleep(0.5)
         print("-------\n\n\n\n")
-        print("You scored 6 out of 8. Thank you for playing.")
+        print("You scored 7 out of 8. Thank you for playing.")
     if score == 8:
-        print_by_char("Well....",0.2)
+        print_by_char("Well...",0.2)
         time.sleep(2)
         print_by_char("I am impressed. You completed the experiment with flying colours.",0.02)
         time.sleep(1)
@@ -209,19 +209,19 @@ def console():
 					print("What are you?")
 					answer5 = input()
 		print("Returning you to menu...")
-		time.sleep(1.4)
+		time.sleep(1)
 		console()
 	elif choice[0] == "clear":
-		if input("Are you sure you want to clear all of your current answers?\nYES\nNO\n") == "yes":
+		if 'yes' in gameparser.normalise_input(input("Are you sure you want to clear all of your current answers?\nYES\nNO\n")):
 			answer1,answer2,answer3,answer4,answer5 = "unanswered"
 			print("Answers cleared.")
-			time.sleep(2)
+			time.sleep(1.5)
 			console()
 	elif choice[0] == "no":
 		print("Very well. Explore the complex and find the answers. Quickly now.")
 	elif choice[0] == "submit":
-		if input("Are you sure you want to submit your answers?\nYES\nNO\n") == "yes":
-			print("Excellent. Assessing your performance....")
+		if 'yes' in gameparser.normalise_input(input("Are you sure you want to submit your answers?\nYES\nNO\n")):
+			print("Excellent. Assessing your performance...")
 			time.sleep(2)
 			score = 0
 			if "harris" in gameparser.normalise_input(str(answer1)):
@@ -241,6 +241,7 @@ def console():
 			if "human" in gameparser.normalise_input(answer5):
 				score = score+1
 			win(score)
+
 interact_console = {
 	"id": "console",
 	"name":"the console in the centre of the room",
@@ -341,7 +342,7 @@ def book():
 	print('''You open the 'Culture Complex's social experiment records' book. \nIt includes lists of hundreds of names, numbers, dates and room names.''')
 
 interact_book = {
-	'id': 'book', 
+	'id': 'book',
 	'name': 'a book',
 	'action': book
 }
