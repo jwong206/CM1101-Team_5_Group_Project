@@ -10,6 +10,7 @@ We hope you enjoy playing, make sure to tell your friends to give it a go!
 Available from 21/10/2016 at all local retailers and specific online sites.
 Requires Python vers 3.5 or greater.
 
+Double click SPOK.bat to run!
 
 Team 5:
 Charlie B
