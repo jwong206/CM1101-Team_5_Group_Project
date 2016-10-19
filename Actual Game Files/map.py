@@ -5,7 +5,7 @@ room_Hub = {
     "name": "Hub",
 
     "description":
-    """----------\n You are standing in what appears to be the command deck of a ship however not a ship from your time.\n You are surrounded by computers that seem to be operating on their own though you have no real\n idea of what they are for.\n After a short while you hear the a humming sound as if something was turning on after which,\n in the four cardinal points of the room, doors open revealing lit up circular pads.\n The light reveals a console standing in the centre of the room, awaiting an input.\n You should search the room.\n----------""",
+    """----------\n You are standing in what appears to be the command deck of a ship, however it is not a ship from your time.\n You are surrounded by computers that seem to be operating on their own, though you have no real\n idea of what they are for.\n After a short while you hear a humming sound as if something were turning on after which,\n in the four cardinal points of the room, doors open revealing lit up circular pads.\n The light reveals a console standing in the centre of the room, awaiting an input.\n You should search the room.\n----------""",
 
     "exits": {"south": "Star Wars", "east": "Indiana Jones", "west": "Shawshank", "north": "Mr Robot"},
 
@@ -75,7 +75,7 @@ room_sherlock = {
     "name": "221B Baker Street",
 
     "description":
-    """----------\n You take a step forward exiting the shimmering lights that soon fade away.\n Taking a glance around the room you find yourself standing by a desk located\n in a darkened library.\n For what you can see in the darkness you notice multiple bookshelves located\n around you as well as open books and notepads on the desk by your side.\n----------""",
+    """----------\n You take a step forward, exiting the shimmering lights that soon faded away.\n Taking a glance around the room you find yourself standing by a desk located\n in a darkened library.\n For what you can see in the darkness you notice multiple bookshelves located\n around you as well as open books and notepads on the desk by your side.\n----------""",
 
     "exits": {"east": "Mr Robot", "south": "Shawshank"},
 
@@ -102,7 +102,7 @@ room_shawshank = {
     "name": "Shawshank State Penitentiary",
 
     "description":
-    """----------\n You enter the room and it becomes clear you are suddenly in a prison cell block.\n Each individual cell is opened slightly with no prisoners in sight.\n The area is littered with old clothing from both prisoners and guards.\n You approach the guard's desk to find it cluttered with magazines, torn up papers and some books.\n----------""",
+    """----------\n You enter the room and it becomes clear you are suddenly in a prison cell block.\n Each individual cell is opened slightly with no prisoners in sight.\n The area is littered with old clothing from both prisoners and guards.\n You approach the guard's desk and found a cluttered mess of magazines, torn up papers and some books.\n----------""",
 
     "exits": {"north": "Sherlock","south": "Jurassic World"},
 

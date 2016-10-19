@@ -310,11 +310,11 @@ interact_crates = {
 }
 
 def walkietalkie():
-	print('Harris, come in. Over.')
-	time.sleep(0.5)
-	print('Harris, come in. Over.')
-	time.sleep(0.5)
-	print('Harris, come in. Over.')
+	print_by_char('Harris, come in. Over.', 0.05)
+	time.sleep(0.8)
+	print_by_char('Can you hear me Harris?', 0.05)
+	time.sleep(0.8)
+	print_by_char('Harris please respond. Over.', 0.05)
 
 interact_walkietalkie = {
 	'id': 'walkietalkie',
@@ -341,7 +341,7 @@ interact_laptop = {
 }
 
 def mirror():
-	print('You look at your reflection in the mirror: \nDark hair, blue eyes, athletic physique. You are handsome.\nYou are wearing a hospital gown with a number on it - 983762.\nYou take a closer look at your hands.\nMovement of your muscles allows your palm to be stretched and compressed.\nYou can feel the blood flowing in your veins.\nYou''re pretty sure that you are human.')
+	print('You look at your reflection in the mirror: \nDark hair, blue eyes, athletic physique. You are handsome.\nYou are wearing a hospital gown with a number on it - 983762.\nYou take a closer look at your hands.\nMovement of your muscles allows your palm to be stretched and compressed.\nYou can feel the blood flowing in your veins.\nYou are pretty sure that you are a human.')
 
 interact_mirror = {
 	'id': 'mirror',

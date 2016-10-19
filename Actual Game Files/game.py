@@ -246,7 +246,7 @@ def print_room(room):
     print_by_char("DATE: "+room["date"],0.04)
     time.sleep(0.5)
     print_by_char("LOCATION: "+room["name"].upper(),0.04)
-    time.sleep(0.7)
+    time.sleep(0.6)
     # Display room description
     print(room["description"])
 
@@ -458,7 +458,7 @@ def execute_interact(interact_id):
 			interactable = True
 			print("\n")
 			i['action']()
-			time.sleep(2)
+			time.sleep(4)
 	if interactable == False:
 		print('You cannot interact with that.')
 		time.sleep(1.5)
